@@ -1,0 +1,5 @@
+.claude/
+.gemini/
+.vscode/
+*.local.json
+*.lock

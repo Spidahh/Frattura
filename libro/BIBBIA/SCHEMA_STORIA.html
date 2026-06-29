@@ -1,0 +1,150 @@
+<!-- ⚠️ OBSOLETO: non allineato al canone post-2026-06-25; rigenerare quando il canone si stabilizza. Vedi BIBBIA/24_CONSOLIDAMENTO. -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FRATTURA — Schema della storia</title>
+<style>
+  :root{
+    --ink:#1f1e1c; --muted:#5f5e5a; --line:#dcdad3; --soft:#f6f5f1;
+    --purple:#534AB7; --purpleBg:#EEEDFE;
+    --teal:#0F6E56;   --tealBg:#E1F5EE;
+    --coral:#993C1D;  --coralBg:#FAECE7;
+    --amber:#854F0B;  --amberBg:#FAEEDA;
+    --red:#A32D2D;    --redBg:#FCEBEB;
+    --gray:#444441;   --grayBg:#F1EFE8;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:#fff;margin:0;line-height:1.5;}
+  .wrap{max-width:920px;margin:0 auto;padding:30px 34px 60px;}
+  h1{font-size:25px;font-weight:600;margin:0 0 2px;letter-spacing:.2px;}
+  .sub{color:var(--muted);font-size:13px;margin-bottom:16px;}
+  h2{font-size:16px;font-weight:600;margin:30px 0 12px;padding-bottom:5px;border-bottom:2px solid var(--line);}
+  p{margin:0 0 8px;} .small{font-size:13px;color:var(--muted);}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px;}
+  .pill{display:inline-block;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:600;border:1px solid transparent;}
+  .p-purple{background:var(--purpleBg);color:var(--purple);} .p-teal{background:var(--tealBg);color:var(--teal);}
+  .p-coral{background:var(--coralBg);color:var(--coral);} .p-amber{background:var(--amberBg);color:var(--amber);}
+  .p-red{background:var(--redBg);color:var(--red);} .p-gray{background:var(--grayBg);color:var(--gray);}
+  .flow{display:flex;flex-direction:column;gap:0;margin:6px 0;}
+  .step{border:1px solid var(--line);border-left:5px solid var(--gray);border-radius:6px;padding:10px 12px;background:var(--soft);}
+  .step b{font-weight:600;} .step .d{font-size:13px;color:var(--muted);margin-top:2px;}
+  .s-purple{border-left-color:var(--purple);} .s-teal{border-left-color:var(--teal);}
+  .s-coral{border-left-color:var(--coral);} .s-amber{border-left-color:var(--amber);} .s-red{border-left-color:var(--red);}
+  .arrow{align-self:center;color:var(--muted);font-size:16px;line-height:1;margin:5px 0;}
+  .cols{display:flex;gap:14px;flex-wrap:wrap;}
+  .col{flex:1 1 280px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;}
+  .col h3{margin:0 0 6px;font-size:14px;font-weight:600;}
+  .col ul{margin:0;padding-left:18px;} .col li{margin:3px 0;font-size:13px;}
+  .lay{border:1px solid var(--line);border-radius:6px;padding:9px 12px;margin:6px 0;display:flex;gap:10px;align-items:flex-start;}
+  .lay .n{font-weight:600;min-width:18px;color:var(--muted);}
+  .lay.l5{border-color:var(--red);background:var(--redBg);}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .card{border:1px solid var(--line);border-radius:8px;padding:11px 13px;}
+  .card h3{margin:0 0 5px;font-size:14px;font-weight:600;} .card ul{margin:0;padding-left:18px;} .card li{font-size:13px;margin:2px 0;}
+  .note{font-size:12px;color:var(--muted);font-style:italic;margin-top:4px;}
+  @media print{ .wrap{max-width:none;padding:0 6mm;} h2{break-after:avoid;} .cols,.grid,.flow,.lay{break-inside:avoid;} body{font-size:12px;} }
+  @page{margin:14mm;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>FRATTURA — Schema della storia</h1>
+  <div class="sub">Stato di lavoro · 2026-06-24 · le voci in rosso/ambra sono colpi di scena o ancora da chiudere</div>
+  <div class="legend">
+    <span class="pill p-purple">bestie / magia</span>
+    <span class="pill p-teal">maghi (per caso)</span>
+    <span class="pill p-coral">gruppo segreto</span>
+    <span class="pill p-amber">aperto / da decidere</span>
+    <span class="pill p-red">colpo di scena / catastrofe</span>
+    <span class="pill p-gray">struttura</span>
+  </div>
+
+  <h2>1 · L'ingranaggio (come funziona, dal motore al disastro)</h2>
+  <div class="flow">
+    <div class="step s-purple"><b>La bestia</b><div class="d">Una creatura, sorgente di un tipo di magia. Sparsa nel mondo. La sua esistenza la sanno pochissimi.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step s-teal"><b>Mago per caso</b><div class="d">Un gesto vicino a un varco invisibile crea un legame con la bestia → un filo sottile di magia. Più la usi, più ti leghi. Non sa da dove venga.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step s-coral"><b>Il gruppo forza il canale (le trasformazioni)</b><div class="d">Trasformare una persona = strappare di colpo un canale enorme verso la bestia → una scarica di magia. La persona è il prezzo: nella Fossa la travolge (mostro impazzito), nell'Esilio regge (trasformato riuscito).</div></div>
+    <div class="arrow">▼</div>
+    <div class="step s-coral"><b>Il gruppo cattura la magia = POTERE</b><div class="d">Magia su scala industriale, mentre tutti gli altri hanno solo il rivolo del caso. È il loro dominio segreto. Provano a prendere altre città (difficile).</div></div>
+    <div class="arrow">▼</div>
+    <div class="step s-amber"><b>Ogni strappo gonfia / sovraccarica la bestia</b><div class="d">Loro vedono il potere crescere, non vedono il conto che sale.</div></div>
+    <div class="arrow">▼</div>
+    <div class="step s-red"><b>La bestia si ribella (endgame)</b><div class="d">Chi usa quella magia da tempo (i loro stessi maghi compresi) impazzisce. Gli ultimi arrivati svengono e perdono i poteri. Si distruggono da soli.</div></div>
+  </div>
+
+  <h2>2 · Due binari separati (da non confondere)</h2>
+  <div class="cols">
+    <div class="col" style="border-left:5px solid var(--teal);border-radius:6px;">
+      <h3>I maghi</h3>
+      <ul>
+        <li>capita <b>per caso</b>, vicino a un varco</li>
+        <li>si crea un <b>legame con la bestia</b></li>
+        <li>più la usi, più <b>affinità</b></li>
+        <li>non sanno la verità</li>
+      </ul>
+    </div>
+    <div class="col" style="border-left:5px solid var(--coral);border-radius:6px;">
+      <h3>Le trasformazioni (roba del gruppo)</h3>
+      <ul>
+        <li><b>Fossa</b> — grezza, di massa → mostri visibili che devastano → contenuti. Copertura: <b>maledizione</b>. I mostri puntano ai <b>varchi</b> (punti fissi).</li>
+        <li><b>Esilio</b> — sui nobili, curata e segreta. Commissione → <b>lettera di convocazione</b> → onore, festa d'addio. Copertura: <b>premio/viaggio</b>.</li>
+        <li>stesso rito, due forme · scelti <b>i migliori</b></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>3 · Chi sa, chi usa (tre livelli)</h2>
+  <div class="cols">
+    <div class="col"><h3>Sa e sfrutta</h3><p class="small">Pochissimi: il gruppo di Vaekh, la tribù di cannibali, forse 1–2 altri. Conoscono la bestia e la usano sapendo.</p></div>
+    <div class="col"><h3>Usa senza sapere</h3><p class="small">Hanno un metodo che funziona, ma non capiscono che dietro c'è una bestia.</p></div>
+    <div class="col"><h3>Non sa per niente</h3><p class="small">Maghi per caso e gente comune: per loro è solo "magia".</p></div>
+  </div>
+
+  <h2>4 · Gli strati del segreto (i colpi di scena)</h2>
+  <div class="lay"><span class="n">1</span><div>Tutti credono: la magia è normale, le Notti sono una <b>maledizione/sfortuna</b>.</div></div>
+  <div class="lay"><span class="n">2</span><div>Le trasformazioni <b>non sono casuali</b>: qualcuno le innesca.</div></div>
+  <div class="lay"><span class="n">3</span><div>Comanda il <b>Patto</b>… ma dietro c'è un <b>gruppo segreto</b> che lo <b>usa</b> a sua insaputa.</div></div>
+  <div class="lay"><span class="n">4</span><div>Il gruppo trasforma la gente per <b>gonfiare la bestia</b> e accrescere il proprio potere.</div></div>
+  <div class="lay l5"><span class="n">5</span><div><b>Verità vera:</b> così facendo la stanno <b>facendo impazzire</b> → la bestia si ribella e travolge tutto. Causato dalle loro stesse mani.</div></div>
+
+  <h2>5 · Il mondo (vasto e vario)</h2>
+  <div class="grid">
+    <div class="card"><h3>Com'è</h3><ul><li>enorme, non tutto a Vaekh</li><li>razze toste, imperatori seri, gente intelligente</li><li>poteri veri: prendere altre città non è facile</li></ul></div>
+    <div class="card"><h3>Modi diversi di legarsi alla bestia</h3><ul><li>Vaekh: per caso, vicino a un varco</li><li>cannibali: mangiando un pezzo della bestia</li><li>altrove: un rito che fa maghi apposta</li><li>+ chi la teme, chi ne fa religione, chi la usa senza sapere</li></ul></div>
+  </div>
+
+  <h2>6 · Stato delle decisioni</h2>
+  <div class="cols">
+    <div class="col" style="border-left:5px solid var(--teal);border-radius:6px;">
+      <h3>Deciso</h3>
+      <ul>
+        <li>bestie = sorgenti di magia, sparse, segrete</li>
+        <li>varchi invisibili ("zone strane")</li>
+        <li>maghi per caso ≠ trasformazioni</li>
+        <li>gruppo segreto ≠ Patto (usa il Patto)</li>
+        <li>trasformazioni gonfiano la bestia → potere</li>
+        <li>endgame: bestia si ribella, maghi impazziscono</li>
+        <li>mondo vasto e vario</li>
+      </ul>
+    </div>
+    <div class="col" style="border-left:5px solid var(--amber);border-radius:6px;">
+      <h3>Ancora aperto</h3>
+      <ul>
+        <li>meccanismo esatto per diventare mago a Vaekh</li>
+        <li>che fine fanno i trasformati "riusciti"</li>
+        <li>origine delle bestie / della magia (mistero finale)</li>
+        <li>chi sono gli altri pochi che sanno</li>
+        <li>personaggi (ensemble, niente protagonista fisso)</li>
+        <li>generi per libro · nomi</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="note">Per stampare: apri questo file nel browser e premi Ctrl+P (margini stretti, formato A4).</p>
+</div>
+</body>
+</html>
