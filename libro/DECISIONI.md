@@ -151,6 +151,15 @@ Dal 2026-06-26 l'utente ha confermato: **accetta tutte le decisioni, nessun dubb
 - ✅ **Apertura L1 rivista con §H:** `cap-01_la-cosa` e `cap-02_sfortuna` riscritti (superficie chiara, nomi ancorati, frasi legate); `cap-05_scorie` ancorati "Sindacato" e "Maelor"; `cap-03/04` verificati e tenuti. Restano cap-06→15 da passare alla §H (vedi `STATO.md`).
 - ✅ **`LEGGI_E_STAMPA/Schemi.html` rifatto leggibile:** pagina-glossario "le parole che tornano" + 4 schemi (macchina nascosta · cosa si svela per libro · rotta saga · 15 capitoli L1) con testo spiegato per esteso, non più sigle. *(utente: "gli schemi non si capiscono, spiegali per esteso")*
 
+### 2026-06-30 — Anti-generico: l'IMPRONTA della saga
+*(utente: "la storia fa cagare, troppo classica e scontata, senza segreti belli — cambia e migliora". Direttiva esplicita di intervenire sul canone per togliere il "già visto". Aggiunte ADDITIVE: non riaprono decisioni chiuse, non toccano i BOCCIATI.)*
+- ✅ **`01_CANONE` §13 "L'IMPRONTA"**: lo scheletro (bestia + gruppo segreto + conduttore che si sacrifica) è la parte comune del genere; l'identità vera (male comodo, gloria desiderata, reduce felice, nessuna testa, bestia mai vista, porta aperta che nessuno varca, sacrificio non eroico) va messa in primo piano in ogni libro.
+- ✅ **Bestia di Vaekh — mai vista, sentita come "memoria che si guasta"** (`01_CANONE` §1): niente kaiju; orrore epistemico. *(coerente coi BOCCIATI: non è creatura-motore.)*
+- ✅ **La gloria si compra** (`01_CANONE` §2; `03` G/L1): mercato nero di lettere di Convocazione falsificate; si lotta per entrare nella propria condanna.
+- ✅ **Vertice senza testa = anticlimax dell'ufficio vuoto** (`01_CANONE` §3; `03` G/L7): in cima un manuale che nessun vivente ha firmato.
+- ✅ **Edran reclutatore sincero** (`02_CAST`): convince altri a desiderare la Convocazione; l'orrore è che non mente.
+- ✅ **Sacrificio di Wick reso ANTI-catartico** (`03` G/L7): nessuna musica da martire, un cambio di guardia. *(NON riapre la decisione "terza via = Wick (sacrificio)": ne cambia solo il tono.)*
+
 ### 2026-06-26 — Nota finale
 *(Se in futuro l'utente cambia qualcosa, aggiungere una riga ❌ + nuova scelta, senza cancellare la storia.)*
 

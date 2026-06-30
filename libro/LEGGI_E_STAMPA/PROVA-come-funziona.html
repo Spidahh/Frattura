@@ -1,0 +1,139 @@
+<meta charset="utf-8">
+<title>Frattura — Come funziona il mondo</title>
+<style>
+:root{
+  --ink:#1b1b1b; --ink2:#444; --muted:#777;
+  --bg:#fbfaf8; --card:#ffffff; --line:#e3e0db;
+  --neutral:#8a8a8a;
+  --secret:#7d5ba6; --secret-bg:#f1ecf6;
+  --danger:#c0392b; --danger-bg:#fbeeec;
+  --goal:#b8860b;  --goal-bg:#fbf3df;
+  --good:#2e8b57;  --good-bg:#e9f5ee;
+  --f: system-ui,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{font-family:var(--f);color:var(--ink);background:var(--bg);margin:0;padding:32px 20px 60px;line-height:1.55}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:30px;margin:0 0 6px;text-align:center}
+.sub{text-align:center;color:var(--ink2);font-size:17px;margin:0 auto 36px;max-width:640px}
+
+.band{font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#fff;background:var(--neutral);
+  padding:8px 16px;border-radius:40px;display:inline-block;margin:0 0 18px}
+.band.secret{background:var(--secret)}
+
+.row{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 8px}
+.row>.card{flex:1;min-width:220px}
+
+.card{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--neutral);
+  border-radius:12px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.card .ico{font-size:26px;line-height:1;margin-bottom:8px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;font-size:15.5px;color:var(--ink2)}
+.card.secret{border-left-color:var(--secret);background:var(--secret-bg)}
+.card.danger{border-left-color:var(--danger);background:var(--danger-bg)}
+.card.danger h3{color:var(--danger)}
+.card.goal{border-left-color:var(--goal);background:var(--goal-bg)}
+.card.goal h3{color:var(--goal)}
+.card.good{border-left-color:var(--good);background:var(--good-bg)}
+.card.good h3{color:var(--good)}
+.card.big h3{font-size:21px}
+
+.arrow{text-align:center;color:var(--secret);font-size:30px;line-height:1;margin:6px 0;font-weight:700}
+.note{text-align:center;font-style:italic;color:var(--muted);font-size:15px;margin:4px 0 14px}
+
+.split{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 8px}
+.split>.card{flex:1;min-width:240px}
+
+.aside{display:flex;gap:16px;flex-wrap:wrap;margin:18px 0 0}
+.aside>.card{flex:1;min-width:240px}
+
+.legend{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-size:14px;color:var(--muted);text-align:center}
+.legend b{color:var(--ink2)}
+
+@media print{ body{background:#fff;padding:0} .card{box-shadow:none} }
+</style>
+
+<div class="wrap">
+<h1>La macchina nascosta</h1>
+<p class="sub">Come funziona <b>davvero</b> il mondo di Frattura. Si legge dall'alto in basso: prima quello che vede la gente, poi — sotto — la verità che nessuno dice mai.</p>
+
+<span class="band">①&nbsp;&nbsp;Quello che vede la gente</span>
+<div class="row">
+  <div class="card">
+    <div class="ico">🎖️</div>
+    <h3>La Convocazione</h3>
+    <p>Sembra un <b>onore</b>: i ragazzi migliori vengono scelti e portati via tra gli applausi. Nessuno osa chiedere dove finiscano.</p>
+  </div>
+  <div class="card">
+    <div class="ico">🕳️</div>
+    <h3>La Fossa</h3>
+    <p>Sembra <b>sfortuna</b>: il quartiere povero dove, ogni tanto, di notte qualcuno "impazzisce". La gente la crede maledetta.</p>
+  </div>
+  <div class="card">
+    <div class="ico">⚔️</div>
+    <h3>Il Patto</h3>
+    <p>Sembra <b>il nemico</b>: il regime che comanda alla luce del sole. Tutti lo temono — ma non sa il segreto vero.</p>
+  </div>
+</div>
+
+<div class="arrow">▼</div>
+<p class="note">…sotto, però, gira un'altra cosa che nessun personaggio dice mai ad alta voce…</p>
+
+<span class="band secret">②&nbsp;&nbsp;Quello che succede davvero</span>
+
+<div class="card secret big">
+  <div class="ico">🕸️</div>
+  <h3>La Commissione</h3>
+  <p>Un <b>gruppo segreto</b> sta dietro tutto. È nascosto perfino al Patto. È lei a muovere la macchina.</p>
+</div>
+<div class="arrow">▼</div>
+
+<div class="card secret">
+  <div class="ico">⚙️</div>
+  <h3>Il rito: lega le persone alla Bestia</h3>
+  <p>La Commissione prende delle persone — le <b>"cavie"</b> — e con un rito le lega a forza alla <b>Bestia</b> addormentata sotto la città. Per procurarsele usa <b>il Silenzio</b>, la polizia segreta del Patto che lei ha infiltrato.</p>
+</div>
+<div class="arrow">▼&nbsp;&nbsp;il rito può finire in due modi&nbsp;&nbsp;▼</div>
+
+<div class="split">
+  <div class="card danger">
+    <div class="ico">🐺</div>
+    <h3>Sui più: il legame si spezza</h3>
+    <p>Diventano <b>mostri</b>. Sono le <b>"Notti"</b> nella Fossa: vengono abbattuti o rinchiusi. Ecco perché la Fossa sembra "sfortunata".</p>
+  </div>
+  <div class="card secret">
+    <div class="ico">⛓️</div>
+    <h3>Su pochi: il legame regge</h3>
+    <p>Sono i <b>Tesi</b>. Spariscono spacciati per "gloria" (ecco la Convocazione) e finiscono <b>prigionieri vivi</b> in fondo a Punto Zero.</p>
+  </div>
+</div>
+<div class="arrow">▼</div>
+
+<div class="card secret">
+  <div class="ico">🔧</div>
+  <h3>Si allarga il "canale" verso la Bestia</h3>
+  <p>Tenere i Tesi su quella soglia <b>non nutre</b> la Bestia: la <b>addestra</b>, la tiene sotto controllo.</p>
+</div>
+<div class="arrow">▼</div>
+
+<div class="card goal big">
+  <div class="ico">👑</div>
+  <h3>Lo scopo vero: il monopolio della magia</h3>
+  <p>Chi controlla la Bestia <b>decide chi, in tutto il mondo, può fare magia</b>. È questo il premio per cui si fa tutto il resto.</p>
+</div>
+
+<div class="aside">
+  <div class="card danger">
+    <div class="ico">💥</div>
+    <h3>Il rischio: il sovraccarico</h3>
+    <p>Se spingono la Bestia troppo oltre, <b>impazzisce e si ribella</b>. È già successo una volta: la <b>Terra Bruciata</b>.</p>
+  </div>
+  <div class="card good">
+    <div class="ico">✨</div>
+    <h3>L'imprevisto: Wick</h3>
+    <p>Si è legato alla Bestia <b>per caso</b>, da solo, senza rito. Non è né mostro né Teso — per questo, alla fine, può essere la <b>"terza via"</b>.</p>
+  </div>
+</div>
+
+<p class="legend">Colori: <b style="color:#8a8a8a">grigio</b> = quello che la gente crede · <b style="color:#7d5ba6">viola</b> = il segreto · <b style="color:#c0392b">rosso</b> = orrore/pericolo · <b style="color:#b8860b">oro</b> = lo scopo · <b style="color:#2e8b57">verde</b> = Wick, l'imprevisto.</p>
+</div>

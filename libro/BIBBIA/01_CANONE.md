@@ -14,6 +14,7 @@ Le **bestie** sono sorgenti vive di magia. La **Commissione** ha imparato a **fo
 - **La magia** è ciò che trapela da una Bestia. Chi è vicino a un varco può, **per caso**, aprire un **legame** (un canale sottile): da quel momento è un **mago** e piega *quel* tipo di magia. La Bestia non se ne accorge: un legame è una goccia. I maghi sono **rari** → noti, stimati o temuti; più usano la magia più si **legano** (affinità); **non sanno** che dietro c'è una bestia.
 - Le Bestie **non vogliono** nulla di umano: niente corpo, niente piano. Il male non è la Bestia: è **chi la sfrutta**.
 - **La Bestia di Vaekh = mente / memoria / identità:** legge e (a fatica) riscrive le persone. Unifica tutto ciò che a Vaekh "legge e corregge": la **Cicatrice**, il **Silenzio** che "rifinisce", i **Dissonanti** (rete di memoria), il dono di **Selene**, i rari **maghi-per-caso** della mente. L'orrore dei **Tesi**: identità tenuta aperta e riscrivibile.
+- **Come si manifesta — MAI vista, sempre sentita (anti-generico):** la Bestia **non appare** come creatura. La sua vicinanza si sente come **memoria che si guasta**: un vicolo intero ricorda un giorno mai accaduto; due sconosciuti finiscono la stessa frase; i registri del Patto la mattina riportano nomi diversi da quelli scritti la sera; una madre per un'ora non riconosce il figlio. Più si scende verso Punto Zero, più i ricordi della gente si **sovrappongono**. Niente kaiju dormiente: l'orrore è **epistemico** (cosa è vero, cosa ricordo davvero), non un tentacolo. *(Coerente coi BOCCIATI: non è massa/creatura-motore, è un fenomeno di mente.)*
 
 ### Una Bestia per regione (tipo · come ci si lega · costo)
 | Regione | Magia | Legame | Costo |
@@ -45,6 +46,7 @@ Sono i segni che il legame forzato **sta prendendo senza spezzare** = compatibil
 ### Le due facce dello STESSO rito (la copertura)
 - **Fossa / le Notti** — esperimenti **grezzi, di massa**, sulla città bassa. Falliscono → mostri → contenuti. Copertura: **maledizione / sfortuna**.
 - **Convocazione / Esilio** — esperimenti **curati**, sui **compatibili** (di solito nobili). Mascherati da **gloria**: Scuola → Torneo → **Torre delle Prove** → lettera → **festa d'addio**. Si crede vadano in una "regione esclusiva riservata ai migliori". Diventano **Tesi**. *La festa d'addio è un funerale che nessuno sa di celebrare.*
+- **La gloria si DESIDERA e si COMPRA (dettaglio L1+, anti-generico):** essere Convocati è così ambito che esiste un **mercato nero di lettere falsificate**. Famiglie povere si indebitano, corrompono, supplicano per **infilare i figli nella macchina**, credendola la fortuna della vita: si **lotta per entrare nella propria condanna a morte**. La copertura non si subisce — **si invidia**. *(Più della censura, è il desiderio a tenere su il sistema.)*
 
 ---
 
@@ -53,6 +55,7 @@ Non vogliono "potere" generico. Vogliono il **monopolio sull'esistenza della mag
 - Sanno che la magia viene dalle bestie e che una bestia si può **portare oltre soglia** finché cade (Terra Bruciata = prova). Piano: **domare e allargare la bestia di Vaekh** fino a renderla l'unica sorgente **controllabile**, e libro dopo libro **far cadere le bestie rivali** lasciando in piedi solo la propria.
 - **#4-bis (si svela tardi):** il **metodo per forzare il legame viene da fuori** — da un sapere antico di cui restano echi nei **Mangiatori** e nella **Teocrazia di Yshar**. Ma è **eredità storica, non un padrone presente**: oggi la Commissione la guida un **piccolo consiglio interno e senza volto, dentro Vaekh**; **Corvin** ne è solo la faccia tecnica e non sa chi siede in cima. La Terra Bruciata fu la **prima prova di fuoco** (una bestia fatta cadere apposta). Vaekh è l'esperimento riuscito.
 - **Ribaltamento tardo (L5–L7):** il consiglio *crede* di comandare, ma è mosso dall'**eredità del metodo** e dalla pulsione della Bestia. **Non c'è una vera testa da uccidere:** cercare il vertice è l'errore che frega chi indaga. La macchina gira per **inerzia e abitudine**.
+  - **Resa concreta (l'anticlimax che spiazza, L5–L7):** chi arriva "in cima" non trova un signore incappucciato. Trova una **stanza con un raccoglitore di procedure che nessun vivente ha firmato**, e funzionari che indicano ognuno *quello sopra di sé* — che non esiste. Il potere è un **manuale che gira da solo**. Aver cercato un mostro da uccidere era l'errore: non c'è nessuno da uccidere, e questo è peggio.
 
 ### Geopolitica L4+ (il mondo reagisce al monopolio)
 Il mondo **non ignora Vaekh**. Altri popoli hanno **bestie proprie** e non vogliono che la Commissione ottenga il monopolio (chi doma Vaekh potrebbe far cadere le loro). **Nessuno vuole *salvare* Vaekh.** Trapela viaggiando (da L4):
@@ -178,3 +181,16 @@ La Bestia è quasi a soglia → la Commissione **accelera** i raccolti (corsa su
 - Questo file è **fabula**, non narrazione: la macchina entra in pagina solo come attrito/gesto/assenza/dettaglio ambiguo (`04_COME_SCRIVERE` §anti-leak / direttiva mistero).
 - Le Bestie non sono "professioni": sono fenomeni. Il male è chi le sfrutta.
 - Decisioni chiuse: tempo reale L1 ~3-5 settimane / saga ~2-3 anni · Commissione = consiglio senza volto (Corvin solo faccia tecnica) · morte grossa L3 = Garek · nomi Wick/Bedrin/Edran · terza via = Wick (sacrificio).
+
+---
+
+## 13. L'IMPRONTA — cosa rende Frattura NON generica (tenere in primo piano)
+*La trama-scheletro (una bestia, un gruppo segreto, un conduttore che si sacrifica) è la parte più **comune** del genere: NON è ciò che vende la saga, e da sola suona "già vista". L'identità vera è qui sotto, e in pagina va messa **prima** dell'idraulica (bestia/canale/monopolio).*
+1. **Il male è comodo, non mostruoso.** Non un cattivo che ride: una macchina ordinata, vivibile, **desiderata**. L'onore più ambito È la condanna a morte; le famiglie offrono i figli e lo chiamano gloria.
+2. **La gloria si compra** (§2, mercato nero delle Convocazioni): la gente **lotta per entrare** nella propria rovina. È il desiderio, non la paura, a reggere il sistema.
+3. **Il reduce torna felice** (Edran): non un guscio — un **testimonial sincero** che ne convince altri. L'orrore è che sta bene.
+4. **Niente testa da tagliare** (§3): il vertice è un **manuale**, non un uomo. L'anticlimax è il colpo.
+5. **La Bestia non si vede mai** (§1): si sente come **memoria che si guasta**, non come kaiju.
+6. **La porta finale è aperta e quasi nessuno esce** (tema, `03` D): la gente **sceglie** la gabbia.
+7. **Il "sacrificio" non è eroico** (`03` G/L7): nessuna catarsi da martire — un **cambio di guardia**, gelo.
+> Regola pratica: in ogni libro almeno **una** di queste deve essere la cosa che il lettore si porta a casa — prima di "bestia/canale/monopolio". Se una scena vende l'idraulica invece dell'impronta, è generica: si rifà.

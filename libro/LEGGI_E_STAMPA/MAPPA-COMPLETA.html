@@ -1,0 +1,541 @@
+<meta charset="utf-8">
+<title>Frattura — Mappa completa della saga</title>
+<style>
+:root{
+  --ink:#1b1b1b; --ink2:#454545; --muted:#777;
+  --bg:#fbfaf8; --card:#ffffff; --line:#e3e0db;
+  --neutral:#8a8a8a; --neutral-bg:#f1f0ed;
+  --secret:#7d5ba6; --secret-bg:#f1ecf6;
+  --danger:#c0392b; --danger-bg:#fbeeec;
+  --goal:#b8860b;  --goal-bg:#fbf3df;
+  --good:#2e8b57;  --good-bg:#e9f5ee;
+  --blue:#2f6f9f;  --blue-bg:#e9f1f7;
+  --f: system-ui,"Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);color:var(--ink);background:var(--bg);margin:0;padding:0 0 80px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(251,250,248,.96);backdrop-filter:blur(4px);border-bottom:1px solid var(--line);padding:10px 0;margin-bottom:28px}
+nav .wrap{display:flex;flex-wrap:wrap;gap:6px}
+nav a{font-size:13px;font-weight:600;color:var(--ink2);text-decoration:none;padding:5px 11px;border-radius:30px;border:1px solid var(--line);background:#fff}
+nav a:hover{background:var(--secret);color:#fff;border-color:var(--secret)}
+
+h1{font-size:32px;margin:30px 0 6px}
+.lead{color:var(--ink2);font-size:17px;margin:0 0 10px;max-width:720px}
+h2{font-size:25px;margin:46px 0 4px;padding-top:10px}
+.h2sub{color:var(--muted);font-size:15px;margin:0 0 18px}
+h3{font-size:18px;margin:0 0 6px}
+
+section{scroll-margin-top:70px}
+
+.band{font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--neutral);padding:7px 15px;border-radius:40px;display:inline-block;margin:0 0 16px}
+.band.secret{background:var(--secret)} .band.danger{background:var(--danger)} .band.goal{background:var(--goal)}
+
+.row{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 8px}
+.row>.card{flex:1;min-width:230px}
+.card{background:var(--card);border:1px solid var(--line);border-left:6px solid var(--neutral);border-radius:12px;padding:15px 17px;box-shadow:0 1px 3px rgba(0,0,0,.05);margin-bottom:14px}
+.card .ico{font-size:24px;line-height:1;margin-bottom:7px}
+.card p{margin:0 0 8px;font-size:15px;color:var(--ink2)}
+.card p:last-child{margin-bottom:0}
+.card.secret{border-left-color:var(--secret);background:var(--secret-bg)}
+.card.danger{border-left-color:var(--danger);background:var(--danger-bg)} .card.danger h3{color:var(--danger)}
+.card.goal{border-left-color:var(--goal);background:var(--goal-bg)} .card.goal h3{color:var(--goal)}
+.card.good{border-left-color:var(--good);background:var(--good-bg)} .card.good h3{color:var(--good)}
+.card.blue{border-left-color:var(--blue);background:var(--blue-bg)}
+.arrow{text-align:center;color:var(--secret);font-size:26px;margin:2px 0;font-weight:700}
+.note{text-align:center;font-style:italic;color:var(--muted);font-size:14px;margin:4px 0 12px}
+
+/* libro */
+.libro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:0 0 20px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.libro>.top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--line);padding-bottom:10px;margin-bottom:14px}
+.libro .num{font-size:30px;font-weight:800;color:var(--secret)}
+.libro .ttl{font-size:22px;font-weight:800}
+.libro .gen{font-size:13px;color:#fff;background:var(--blue);padding:3px 10px;border-radius:20px;font-weight:700}
+.libro .tema{font-size:14px;color:var(--muted);font-style:italic;margin-left:auto}
+.libro h4{margin:14px 0 6px;font-size:13px;letter-spacing:.6px;text-transform:uppercase;color:var(--secret)}
+.libro h4.r{color:var(--danger)}
+.libro ul{margin:0;padding-left:20px}
+.libro li{font-size:15px;margin:0 0 5px;color:var(--ink2)}
+.libro .twist{color:var(--danger)}
+.cols2{display:flex;gap:22px;flex-wrap:wrap}
+.cols2>div{flex:1;min-width:260px}
+
+/* tabelle */
+table{width:100%;border-collapse:collapse;font-size:14px;margin:0 0 14px}
+th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;line-height:1.45}
+th{background:var(--neutral-bg);font-size:12.5px;letter-spacing:.3px}
+td.k{font-weight:700;white-space:nowrap}
+tr:nth-child(even) td{background:#fbfaf9}
+.mat td,.mat th{text-align:center;font-size:12.5px;padding:7px 6px}
+.mat td.k{text-align:left}
+
+.pers{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:12px;border-top:4px solid var(--neutral)}
+.pers.core{border-top-color:var(--secret)} .pers.foss{border-top-color:var(--goal)}
+.pers.vert{border-top-color:var(--blue)} .pers.cult{border-top-color:#8e44ad} .pers.bad{border-top-color:var(--danger)}
+.pers h3{margin:0 0 3px} .pers .role{font-size:12.5px;color:var(--muted);margin:0 0 8px;font-weight:600;text-transform:uppercase;letter-spacing:.3px}
+.pers p{margin:0 0 5px;font-size:14.5px;color:var(--ink2)}
+.pers b.lab{color:var(--ink);font-weight:700}
+
+.legend{margin-top:18px;font-size:13px;color:var(--muted)}
+.legend b{color:var(--ink2)}
+.colorkey span{display:inline-block;margin:0 12px 6px 0;font-size:13px}
+.dot{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:middle}
+</style>
+
+<nav><div class="wrap">
+  <a href="#macchina">① La macchina</a>
+  <a href="#verita">② I 5 strati</a>
+  <a href="#mondo">③ Il mondo</a>
+  <a href="#libri">④ I 7 libri</a>
+  <a href="#personaggi">⑤ Personaggi</a>
+  <a href="#matrice">⑥ Chi fa cosa</a>
+  <a href="#sottotrame">⑦ Sottotrame</a>
+  <a href="#colpi">⑧ Colpi di scena</a>
+  <a href="#semi">⑨ Semi → raccolta</a>
+  <a href="#intrecci">⑩ Intrecci</a>
+</div></nav>
+
+<div class="wrap">
+<h1>FRATTURA — Mappa completa della saga</h1>
+<p class="lead">Tutto in una pagina: come funziona il mondo, i 5 strati di segreto, i 7 libri evento per evento, ogni personaggio e cosa fa in ogni libro, le sottotrame, i colpi di scena, e dove ogni seme viene raccolto. Usa la barra in alto per saltare a una sezione.</p>
+<p class="colorkey">
+  <span><span class="dot" style="background:#8a8a8a"></span>superficie (si crede)</span>
+  <span><span class="dot" style="background:#7d5ba6"></span>il segreto</span>
+  <span><span class="dot" style="background:#c0392b"></span>orrore / colpo di scena</span>
+  <span><span class="dot" style="background:#b8860b"></span>lo scopo</span>
+  <span><span class="dot" style="background:#2e8b57"></span>Wick, l'imprevisto</span>
+</p>
+
+<!-- ===================== 1 · LA MACCHINA ===================== -->
+<section id="macchina">
+<h2>① La macchina nascosta</h2>
+<p class="h2sub">Il cuore di tutto. In alto cosa vede la gente; sotto, la verità che nessun personaggio dice mai.</p>
+
+<span class="band">Quello che vede la gente</span>
+<div class="row">
+  <div class="card"><div class="ico">🎖️</div><h3>La Convocazione</h3><p>Sembra un <b>onore</b>: i migliori scelti e portati via tra gli applausi. Nessuno chiede dove finiscano.</p></div>
+  <div class="card"><div class="ico">🕳️</div><h3>La Fossa</h3><p>Sembra <b>sfortuna</b>: il quartiere povero dove, di notte, qualcuno "impazzisce". La credono maledetta.</p></div>
+  <div class="card"><div class="ico">⚔️</div><h3>Il Patto</h3><p>Sembra <b>il nemico</b>: il regime che comanda in piazza. Tutti lo temono — ma non sa il segreto.</p></div>
+</div>
+<div class="arrow">▼</div>
+<p class="note">…sotto, però, gira un'altra cosa che nessuno dice mai ad alta voce…</p>
+
+<span class="band secret">Quello che succede davvero</span>
+<div class="card secret"><div class="ico">🕸️</div><h3>La Commissione</h3><p>Un <b>gruppo segreto</b> dietro tutto, nascosto perfino al Patto. Non un trono: un <b>consiglio senza volto</b> mosso più dall'abitudine e dall'eredità del metodo che da una vera testa da uccidere.</p></div>
+<div class="arrow">▼</div>
+<div class="card secret"><div class="ico">⚙️</div><h3>Il rito: lega le persone alla Bestia</h3><p>Prende delle persone (le <b>"cavie"</b>) e con un <b>innesco</b> — segno + materia di bestia + contatto a un nodo, sotto stress — le lega a forza alla <b>Bestia</b> addormentata sotto la città. Per procurarsele usa <b>il Silenzio</b>, la polizia segreta del Patto che ha infiltrato.</p></div>
+<div class="arrow">▼&nbsp;&nbsp; il rito finisce in due modi &nbsp;&nbsp;▼</div>
+<div class="row">
+  <div class="card danger"><div class="ico">🐺</div><h3>Si spezza → MOSTRI</h3><p>Sulla maggior parte il legame salta: diventano i mostri delle <b>"Notti"</b> nella Fossa (la "sfortuna"). Abbattuti o contenuti nelle Fondamenta.</p></div>
+  <div class="card secret"><div class="ico">⛓️</div><h3>Regge → i TESI</h3><p>Sui pochi compatibili tiene: sono i <b>Tesi</b>. Spariscono spacciati per "gloria" (la Convocazione) e finiscono <b>prigionieri vivi</b> a Punto Zero.</p></div>
+</div>
+<div class="arrow">▼</div>
+<div class="card secret"><div class="ico">🔧</div><h3>Si allarga il "canale"</h3><p>Tenere i Tesi sulla soglia <b>non nutre</b> la Bestia: la <b>addestra e dilata</b>. (Per questo i mostri puntano ai nodi e li allargano: mappano la rete sotto Vaekh.)</p></div>
+<div class="arrow">▼</div>
+<div class="card goal"><div class="ico">👑</div><h3>Lo scopo: il MONOPOLIO della magia</h3><p>Chi controlla la Bestia <b>decide chi, in tutto il mondo, può fare magia</b>. Piano: domare Vaekh e far cadere le bestie rivali, lasciando in piedi solo la propria.</p></div>
+<div class="row">
+  <div class="card danger"><div class="ico">💥</div><h3>Il rischio: il sovraccarico</h3><p>Spinta troppo, la Bestia <b>impazzisce e si ribella</b>: i maghi di quella bestia impazziscono, gli ultimi svengono. È già successo: la <b>Terra Bruciata</b>.</p></div>
+  <div class="card good"><div class="ico">✨</div><h3>L'imprevisto: Wick</h3><p>Legato alla Bestia <b>per caso</b>, da solo, senza rito. Un legame <b>libero</b>: non saldato, quindi modulabile. Né mostro né Teso — la <b>"terza via"</b> del finale.</p></div>
+</div>
+</section>
+
+<!-- ===================== 2 · I 5 STRATI ===================== -->
+<section id="verita">
+<h2>② I 5 strati di verità</h2>
+<p class="h2sub">Cosa capisce il lettore, e quando. Ogni libro ne svela uno e semina il successivo.</p>
+<table>
+<tr><th>Strato</th><th>Cosa si capisce</th><th>Svelato in</th></tr>
+<tr><td class="k">0 · Superficie</td><td>Convocazione = gloria; Fossa = sfortuna; il Patto fascista è il nemico.</td><td>inizio</td></tr>
+<tr><td class="k">1</td><td>Le Notti / i mostri <b>non sono casuali</b>: qualcosa li innesca e li copre.</td><td><b>L1</b></td></tr>
+<tr><td class="k">2</td><td>Dietro agisce un <b>gruppo segreto</b> (la Commissione), nascosto anche al Patto; e <b>Fossa ed Esilio sono lo stesso rito</b>.</td><td><b>L3</b></td></tr>
+<tr><td class="k">3</td><td>Il rito <b>forza il legame con una bestia</b>; la "regione esclusiva" è <b>Punto Zero</b>; i Convocati diventano i <b>Tesi</b> (Riven è uno).</td><td><b>L5</b></td></tr>
+<tr><td class="k">4</td><td>La Commissione doma la bestia per il <b>monopolio della magia</b>; il metodo <b>viene da fuori</b> (la Terra Bruciata fu il primo colpo); il mondo esterno reagisce. Finale = <b>sovraccarico / rivolta</b>.</td><td><b>L4→L7</b></td></tr>
+</table>
+<p class="note">Anti-spoiler: nessun punto di vista è "dentro la Commissione" finché il suo strato non è svelato — non prima di L6.</p>
+</section>
+
+<!-- ===================== 3 · IL MONDO ===================== -->
+<section id="mondo">
+<h2>③ Il mondo</h2>
+<p class="h2sub">La città verticale dove inizia tutto, e le sette regioni del mondo vasto — ognuna con la sua bestia.</p>
+
+<h3>Vaekh, la città verticale (dall'alto in basso)</h3>
+<table>
+<tr><th>Livello</th><th>Cos'è</th><th>Luoghi</th></tr>
+<tr><td class="k">VERTICE</td><td>Il potere "pulito" del Patto. <i>Danno sterilizzato:</i> l'ordine come ambiente.</td><td>Esagono (palazzo) · Incudine (militare) · Marchio Bianco (commercio) · Via dei Donatori (grandi famiglie: tengono il rango "offrendo figli") · il Silenzio.</td></tr>
+<tr><td class="k">FOSSA<br>(~120.000)</td><td>La città bassa, povera. <i>Danno esposto:</i> ecosistema vivo che macina gente. È qui che capitano le Notti.</td><td>Groviglio (cuore abitato) · Bocca di Cenere (mercato nero) · Budello (industria morta) · Soglia (confine instabile) · Valvola (arena di violenza).</td></tr>
+<tr><td class="k">FONDAMENTA</td><td>Il sottosuolo vivo: dove i mostri sono contenuti e dove la Commissione opera, verso la bestia.</td><td>Cantine → Giardino → Coro → Bocche → Soglia Nera · la <b>Cicatrice</b> (legge e corregge) · la <b>Torre delle Prove</b> · l'Arena del Torneo · in fondo <b>Punto Zero</b> (dove stanno i Tesi).</td></tr>
+</table>
+
+<h3>Le sette regioni e le loro bestie</h3>
+<table>
+<tr><th>Regione</th><th>Tipo di magia</th><th>Come reagisce al monopolio (L4+)</th></tr>
+<tr><td class="k">Vaekh</td><td>mente / memoria / identità</td><td>sede della Commissione: l'esperimento riuscito.</td></tr>
+<tr><td class="k">Impero del Sale</td><td>bestia dormiente (magia quasi assente)</td><td>magia = eresia → vuole <b>distruggere</b> la fonte; caccia i maghi.</td></tr>
+<tr><td class="k">Lega dei Porti</td><td>marea / scambio</td><td>magia = merce → vuole <b>comprare/spartire</b> il controllo; vende info a tutti.</td></tr>
+<tr><td class="k">Teocrazia di Yshar</td><td>carne / guarigione-e-marciume</td><td>ha la sua bestia-dio → teme il monopolio e vorrebbe <b>prendere il metodo</b>. Mostra dove porta il rito: i "grati".</td></tr>
+<tr><td class="k">Terre Mangiate / Mangiatori</td><td>sangue / stirpe (mangiando la bestia)</td><td>custodi ambigui della "vecchia via" da cui viene il metodo.</td></tr>
+<tr><td class="k">Nord / Gelidi</td><td>gelo / immobilità</td><td>isolati; sfondo (rifugio disperato).</td></tr>
+<tr><td class="k">Terra Bruciata</td><td>bestia <b>già caduta</b> (rovina/fuoco)</td><td>il monito: cosa aspetta Vaekh se la Bestia va in sovraccarico.</td></tr>
+</table>
+<p class="note">Il sottosuolo collega i varchi anche tra regioni: una mappa parallela viaggiabile (meccanica del viaggio: L4).</p>
+</section>
+
+<!-- ===================== 4 · I 7 LIBRI ===================== -->
+<section id="libri">
+<h2>④ I 7 libri, evento per evento</h2>
+<p class="h2sub">Per ogni libro: genere, dove sono i protagonisti, cosa si svela, gli eventi chiave, i colpi di scena, chi paga.</p>
+
+<div class="libro">
+  <div class="top"><span class="num">L1</span><span class="ttl">Sfortuna</span><span class="gen">thriller / indagine</span><span class="tema">tema: la copertura</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>Un esperimento-Fossa <b>fallisce in pubblico</b> (una Notte di troppo); il Silenzio copre goffo.</li>
+      <li>Muore il prefetto <b>Lucan</b>: il Patto deve gestire il caso, e l'indagine tocca la Fossa.</li>
+      <li>Persone che si odiano — <b>Selene, Wick, Dorian</b> e gente della Fossa — finiscono buttate insieme e braccate.</li>
+      <li>Collegano più Notti (stesso segno, stessi percorsi): la prova è nei <b>registri di Bedrin</b>.</li>
+      <li><b>Bedrin</b> uccide il boss <b>Maelor</b> quando questi prende in ostaggio la figlia <b>Pim</b>. <b>Nerissa</b> sale al comando.</li>
+      <li><b>Mira</b> sfrutta il caso Lucan per salire al Vertice.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> le Notti non sono casuali.</li><li><b>Trapela:</b> il Silenzio "arriva prima"; un Convocato tornato (Edran) con frammenti che non tornano; poteri impossibili; una mano oltre il Patto.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Lucan ucciso <b>dai suoi</b> (aveva smesso di firmare gli ordini ciechi).</li>
+      <li><b>Pim mostra i primi segni</b>: la leva su Bedrin non era casuale.</li>
+      <li>La "Catena" resistente è un ignaro organo della macchina.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L2</span><span class="ttl">La Discesa</span><span class="gen">avventura + horror</span><span class="tema">tema: la compatibilità</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>Braccati, scendono nelle Fondamenta (Cantine → Giardino → Coro → Bocche → Soglia Nera).</li>
+      <li>Scoprono la <b>Cicatrice</b> ("legge e corregge"); le sue creature hanno origine umana. <b>Calix</b> valuta, non salva; <b>Veyne Tal</b>, il costo lungo.</li>
+      <li>Compare il <b>Viandante</b>, che fiuta Wick. Wick scopre che i mostri <b>puntano ai nodi</b> e li allargano.</li>
+      <li>Trovano la <b>via custodita verso il basso</b> (non ancora attraversabile).</li>
+      <li><b>Bedrin</b> apre il libro (legge la rete di Nerissa) poi esce di scena; <b>Garek</b> comincia a dissentire dal culto.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> dove vanno i mostri (i nodi) + la Cicatrice.</li><li><b>Trapela:</b> Fossa ed Esilio "profumano uguale"; una via è sorvegliata.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Il Viandante è un <b>legame libero</b> che Wick conosceva.</li>
+      <li>La Cicatrice mostra il <b>futuro vero</b>, non le paure.</li>
+      <li>La porta è sorvegliata per impedire che i Tesi siano <b>liberati</b>.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L3</span><span class="ttl">La Stretta</span><span class="gen">assedio + spionaggio</span><span class="tema">tema: l'amministrazione</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>La macchina reagisce: un quartiere bloccato, posti di blocco, claustrofobia.</li>
+      <li>Scoprono la <b>mano oltre il Patto</b> (documenti di Aeris, sabotaggi di Thane).</li>
+      <li><b>Mira</b> intercetta la Commissione e prova a trattare.</li>
+      <li>Cadono gli infami del Vertice: <b>Vossar</b> fatto a pezzi, <b>Brann</b> pugnalato dai suoi, <b>Coss</b> perde il Silenzio.</li>
+      <li><b>Muore Garek</b> coprendo la fuga (morte-motore).</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> esiste la <b>Commissione</b>, nascosta anche al Patto; Fossa ed Esilio = stesso rito; il Silenzio è infiltrato.</li><li><b>Trapela:</b> lo scopo (monopolio).</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li><b>Sevran</b> (il credente sereno) è la <b>talpa</b> che smonta la macchina da dentro.</li>
+      <li><b>Thane</b> scende volontariamente a sabotarla.</li>
+      <li>Anche la Commissione è "le mani" di qualcosa di più vecchio.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L4</span><span class="ttl">La Terra Bruciata</span><span class="gen">caccia nel mondo</span><span class="tema">tema: l'eredità</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>Fuori da Vaekh: <b>Sale</b> (caccia ai maghi), <b>Porti</b> (compra/vende magia), <b>Yshar / Mangiatori</b>.</li>
+      <li>Visitano la <b>Terra Bruciata</b> (bestia caduta = cosa aspetta Vaekh).</li>
+      <li><b>Wick</b> capisce <b>cos'è</b> il suo potere (un legame libero).</li>
+      <li><b>Aurel</b> ed <b>Edran</b>: emerge l'origine del "caso Vaeldrin".</li>
+      <li><b>Aeris</b> vende verità che peggiorano chi le compra.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> esistono altre bestie e popoli.</li><li><b>Trapela il colpo grosso:</b> il metodo viene da fuori; la Terra Bruciata fu la prima prova; Vaekh è un esperimento.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Yshar mostra <b>dove porta il metodo</b>: una società che adora la bestia domata (i "grati").</li>
+      <li><b>Dorian doveva essere Convocato</b>: la sua diserzione "eroica" è una bugia.</li>
+      <li>Il metodo fu un'arma in una <b>faida antica</b>: eredità, non un padrone presente.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L5</span><span class="ttl">I Tesi</span><span class="gen">resa dei conti</span><span class="tema">tema: la funzione</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>Scontro aperto col Patto; la Commissione si espone.</li>
+      <li><b>Riven</b> ritrovato: non offre catarsi, parla a lampi che costano stabilità.</li>
+      <li><b>Selene</b> affronta che Riven è la <b>regolazione vivente</b> di ciò che odia.</li>
+      <li>Resa dei conti: <b>Coss</b> sbranato da ciò che archiviava, <b>Drusca</b> dal suo doppio gioco, <b>Zelo</b> dalla sua devozione.</li>
+      <li><b>Mira</b> entra nella Commissione credendo di prenderne il controllo.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> il rito forza il legame; esistono i Tesi; Riven è uno; la "regione esclusiva" è Punto Zero.</li><li><b>Trapela:</b> il monopolio.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Riven <b>tiene stabile il canale</b>: liberarlo può far crollare il mondo.</li>
+      <li>I Tesi sono coscienti e alcuni <b>non vogliono uscire</b>.</li>
+      <li>Non c'è nessuna testa: <b>Mira decide di diventarla lei</b>.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L6</span><span class="ttl">La Spaccatura</span><span class="gen">corsa contro il tempo</span><span class="tema">tema: la frattura del potere</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>Alleanze impossibili mentre il margine finisce.</li>
+      <li>La <b>Commissione si spacca</b> (frenare vs spingere).</li>
+      <li><b>Mira</b> scopre di tenere in mano una <b>bomba</b>.</li>
+      <li><b>Halric</b> tradisce un'ultima volta, per convinzione.</li>
+      <li><b>Bedrin torna</b>: sua figlia <b>Pim</b> è stata Convocata.</li>
+      <li><b>Wick</b> (libero) ed <b>Edran</b> (slittato) = le due chiavi.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> le bestie e il <b>sovraccarico</b>; la Bestia di Vaekh è al limite.</li><li><b>Trapela:</b> corsa contro il tempo.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Tre fazioni: frenatori / spingitori / <b>chi VUOLE il sovraccarico</b> come rinascita.</li>
+      <li>Wick scopre che potrebbe <b>regnare</b> sul canale (tentazione, non sacrificio).</li>
+      <li>Bedrin torna perché Pim è stata Convocata.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+
+<div class="libro">
+  <div class="top"><span class="num">L7</span><span class="ttl">La Soglia</span><span class="gen">catastrofe + tragedia</span><span class="tema">tema: la soglia</span></div>
+  <div class="cols2">
+   <div>
+    <h4>Cosa succede</h4>
+    <ul>
+      <li>A Punto Zero si scontrano <b>tre volontà</b>: Commissione / Mira / eroi.</li>
+      <li>La soglia è superata: la Bestia <b>si ribella</b>, i suoi maghi impazziscono, gli ultimi svengono.</li>
+      <li><b>Scelta finale impossibile:</b> liberare i Tesi (il canale collassa, un pezzo di mondo si spezza, ma il monopolio muore) <b>o</b> lasciarli (la macchina gira, magari in mani peggiori).</li>
+      <li><b>Terza via:</b> Wick regge il canale un istante — sacrificio, non vittoria.</li>
+    </ul>
+   </div>
+   <div>
+    <h4>Si svela / trapela</h4>
+    <ul><li><b>Svela:</b> la rivolta + la scelta finale sui Tesi. Payoff di tutto.</li></ul>
+    <h4 class="r">Colpi di scena</h4>
+    <ul class="twist">
+      <li>Il monopolio <b>non era il fine</b>: la macchina tratteneva un sovraccarico globale.</li>
+      <li>Il sacrificio di Wick <b>non libera i Tesi</b>: diventa lui la nuova soglia.</li>
+      <li>Nessuna vittoria pulita: Mira vince il vuoto, Riven non è più Riven.</li>
+    </ul>
+   </div>
+  </div>
+</div>
+</section>
+
+<!-- ===================== 5 · PERSONAGGI ===================== -->
+<section id="personaggi">
+<h2>⑤ I personaggi</h2>
+<p class="h2sub">Cosa vuole, cosa teme, cosa nasconde, come cambia, come finisce — e con chi è legato.</p>
+
+<h3>Il fronte (i punti di vista)</h3>
+<div class="pers core"><h3>Selene</h3><div class="role">POV centrale · nobile fuggita · legge la mente</div>
+<p><b class="lab">Vuole:</b> ritrovare il fratello Riven. <b class="lab">Teme:</b> non distinguere più le proprie emozioni da quelle che assorbe. <b class="lab">Nasconde:</b> che usa anche chi ama (cura → debito → accesso).</p>
+<p><b class="lab">Arco:</b> gloria → dubbio → metodo sporco → capisce di somigliare al sistema che odia → al finale apre senza scaricare il costo su altri.</p>
+<p><b class="lab">Legami:</b> Riven (fratello), Wick (la desidera lui), Dorian (attrazione frenata), Noma, Mira (specchio oscuro). <b class="lab">Destino:</b> sopravvive, cambiata.</p></div>
+
+<div class="pers core"><h3>Wick</h3><div class="role">POV centrale · il mago-per-caso · legame libero</div>
+<p><b class="lab">Vuole:</b> sparire, non essere scoperto. <b class="lab">Teme:</b> che usare il potere lo faccia <b>esistere</b> (lui che si è reso invisibile). <b class="lab">Nasconde:</b> che la tentazione non è godere, è <b>contare</b>; e che spingere lo svuota.</p>
+<p><b class="lab">Arco:</b> terrore → uso → l'ebbrezza di esistere → orrore di volersi sentire qualcuno a quel prezzo → terza via (sacrificio).</p>
+<p><b class="lab">Legami:</b> il Viandante (specchio), Calix ("pericolo tecnico"), Selene (non corrisposto), Maelor (riflesso brutale). <b class="lab">Destino:</b> si svuota nel sacrificio finale.</p></div>
+
+<div class="pers core"><h3>Dorian (Vaeldrin)</h3><div class="role">POV · ex Martello del Patto, disertore</div>
+<p><b class="lab">Vuole:</b> punire il sistema e sé stesso. <b class="lab">Teme:</b> scoprire che <b>amava</b> l'ordine. <b class="lab">Nasconde:</b> la nostalgia del comando.</p>
+<p><b class="lab">Arco:</b> disertore pieno del linguaggio del sistema → capisce che "governare meglio" è una gabbia più pulita → molla l'istinto da guardiano.</p>
+<p><b class="lab">Legami:</b> Sevran (specchio sereno), <b>Edran (fratello)</b>, Aurel (il caso Vaeldrin), Selene (attrazione). <b class="lab">Destino:</b> sopravvive; rinuncia al ruolo di custode.</p></div>
+
+<div class="pers foss"><h3>Bedrin</h3><div class="role">POV-Fossa di L1 · contabile, vedovo</div>
+<p><b class="lab">Vuole:</b> proteggere la figlia Pim. <b class="lab">La sua esplosione:</b> uccide Maelor quando tocca Pim. <b class="lab">Legami:</b> Pim (figlia), Maelor (lo spreme), Nerissa. <b class="lab">Ritorna:</b> in L6, perché Pim è stata Convocata.</p></div>
+
+<h3>I due fratelli "convertiti"</h3>
+<div class="row">
+<div class="pers core" style="flex:1;min-width:280px"><h3>Riven</h3><div class="role">fratello di Selene · Convocato → Teso</div>
+<p>Prova che il sistema converte le persone in meccanismo. Da L5: voce a lampi che costano stabilità. Al finale rifiuta di diventare il nuovo perno: è un costo che la saga non restituisce.</p></div>
+<div class="pers core" style="flex:1;min-width:280px"><h3>Edran</h3><div class="role">fratello di Dorian · il Convocato tornato</div>
+<p>Un Teso slittato, tornato <b>sereno e grato</b> (non un guscio vuoto): l'orrore è che sta bene. La prima crepa nel racconto della gloria. Dice "a volte restituiscono". L1 (compare) → L4 (origine) → L7 (chiave).</p></div>
+</div>
+
+<h3>Vertice · Patto · Commissione</h3>
+<div class="pers vert"><h3>Mira</h3><div class="role">predatrice al Vertice</div>
+<p><b class="lab">Vuole:</b> sostituire il Patto e decidere lei "chi passa". <b class="lab">Nasconde:</b> che non le serve aver ragione, le basta vincere il racconto pubblico. <b class="lab">Arco:</b> sale col caos (L1) → tratta (L3) → entra nella Commissione (L5) → scopre la bomba (L6) → terza volontà (L7). Vince abbastanza.</p></div>
+<div class="row">
+<div class="pers vert" style="min-width:260px"><h3>Sevran</h3><div class="role">inquisitore sincero</div><p>Crede davvero nell'ordine, ed è in pace. <b>Non muore.</b> È l'opposto sereno di Dorian — e la talpa che smonta la macchina da dentro (L3).</p></div>
+<div class="pers vert" style="min-width:260px"><h3>Aeris</h3><div class="role">archivista, mercante di segreti</div><p>Vende verità che <b>peggiorano</b> chi le compra; tratta tutti da futuri padroni. Fa vedere che ti legge.</p></div>
+<div class="pers vert" style="min-width:260px"><h3>Thane</h3><div class="role">burocrate</div><p>Salva <b>distruggendo documenti</b>, senza epica; lascia varchi amministrativi che altri useranno peggio.</p></div>
+</div>
+<div class="row">
+<div class="pers vert" style="min-width:260px"><h3>Aurel</h3><div class="role">ex inquisitore pentito</div><p>Una colpa storica: "gestì" anni fa un Convocato — <b>Edran</b> — ora tornato. Lega Dorian al segreto. Mai assolto.</p></div>
+<div class="pers cult" style="min-width:260px"><h3>Mirelle</h3><div class="role">sperimentatrice della Commissione</div><p>Tratta le persone come <b>materiale</b>, nessuna morale. Tornare da lei è una perdita morale concreta.</p></div>
+<div class="pers cult" style="min-width:260px"><h3>Corvin</h3><div class="role">tecnico/architetto della Commissione</div><p>Il volto burocratico del segreto. Crede di controllare tutto — e non è vero; non sa chi siede al vertice.</p></div>
+</div>
+
+<h3>La Fossa e le reti</h3>
+<div class="row">
+<div class="pers bad" style="min-width:260px"><h3>Maelor</h3><div class="role">bruto del Sindacato · ignorante arrogante</div><p>Usa il degrado come arma. Riflesso brutale di Wick. <b>Muore sgozzato da Bedrin</b> (L1) quando tocca Pim.</p></div>
+<div class="pers foss" style="min-width:260px"><h3>Nerissa</h3><div class="role">stratega del Sindacato</div><p>Vuole farne una rete d'informazioni. Da nemica di Maelor a <b>alleata sporca</b> della discesa. Accordi corretti, mai altruisti.</p></div>
+<div class="pers foss" style="min-width:260px"><h3>Pim</h3><div class="role">figlia di Bedrin, 8 anni</div><p>Rapita da Maelor e salvata; <b>mostra i "primi segni"</b> (è compatibile). Torna Convocata in L6.</p></div>
+</div>
+<div class="row">
+<div class="pers foss" style="min-width:260px"><h3>Noma</h3><div class="role">nodo dei Dissonanti (bottega di tè)</div><p>Non "la vecchia saggia": mette condizioni, risponde con domande. Spinge Selene al metodo sporco. In L1 <b>tradisce per conto</b>.</p></div>
+<div class="pers foss" style="min-width:260px"><h3>Timo / i Topi</h3><div class="role">corriere ragazzino dei Dissonanti</div><p>Insolente; <b>preso dal Silenzio</b> in L1. I Topi = bambini messaggeri.</p></div>
+<div class="pers cult" style="min-width:260px"><h3>Livia</h3><div class="role">capo dell'Occhio Spezzato (culto)</div><p>"Industrializza il dolore" con le <b>Ostie</b>. Ha capito una mezza verità; vuole Wick come profeta/fonte.</p></div>
+</div>
+<div class="row">
+<div class="pers cult" style="min-width:260px"><h3>Garek</h3><div class="role">crepa interna al culto</div><p>Diserta (L2-L3) quando capisce che il modello divora gente troppo in fretta; <b>muore in L3</b> coprendo la fuga (morte-motore).</p></div>
+<div class="pers cult" style="min-width:260px"><h3>Calix / Veyne Tal</h3><div class="role">la Cicatrice</div><p>Calix <b>valuta, non salva</b>; legge Wick come "pericolo tecnico". Veyne Tal: uomo ridotto a competenza immobile, il costo lungo della correzione.</p></div>
+<div class="pers cult" style="min-width:260px"><h3>Padre Halric</h3><div class="role">custode credente</div><p><b>Tradisce per convinzione</b> (consegnare qualcuno gli sembra salvezza); picco in L6.</p></div>
+</div>
+
+<h3>Gli infami (pagano per i loro difetti) e le morti-motore</h3>
+<div class="card danger"><p><b>Infami:</b> Maelor → sgozzato da Bedrin (L1) · <b>Coss</b> firma le sparizioni col sorriso → sbranato da ciò che archiviava (L5) · <b>Brann</b> capitano sadico → pugnalato dai suoi (L3) · <b>Vossar</b> nobile ipocrita → fatto a pezzi (L3) · <b>Drusca</b> → muore del suo doppio gioco (L5) · <b>Zelo</b> fanatico → divorato dalla sua devozione (L5).</p>
+<p><b>Morti-motore (pesano da morti):</b> <b>Soren</b> (capo Sindacato: la morte apre la guerra) · <b>Lucan</b> (prefetto: la morte innesca L1) · <b>Kesh</b> (cercò le Notti e morì) · <b>Varen</b> (Martello: il fallimento del contenimento).</p>
+<p><b>Mistero vivente:</b> <b>il Viandante</b> — un conduttore fallito persistente, predatore tragico, specchio di Wick.</p></div>
+</section>
+
+<!-- ===================== 6 · MATRICE ===================== -->
+<section id="matrice">
+<h2>⑥ Chi fa cosa, libro per libro</h2>
+<p class="h2sub">Dove si trova ogni protagonista in ciascun libro.</p>
+<table class="mat">
+<tr><th>Personaggio</th><th>L1</th><th>L2</th><th>L3</th><th>L4</th><th>L5</th><th>L6</th><th>L7</th></tr>
+<tr><td class="k">Selene</td><td>Vaekh</td><td>Fondamenta</td><td>assedio</td><td>mondo vasto</td><td>ritorno</td><td>caccia</td><td>Punto Zero</td></tr>
+<tr><td class="k">Wick</td><td>Vaekh</td><td>Fondamenta</td><td>assedio</td><td>Yshar/Mangiatori</td><td>ritorno</td><td>caccia</td><td>Punto Zero (sacrificio)</td></tr>
+<tr><td class="k">Dorian</td><td>Vaekh</td><td>Fondamenta</td><td>assedio (Sevran)</td><td>mondo vasto</td><td>ritorno</td><td>caccia</td><td>Punto Zero</td></tr>
+<tr><td class="k">Riven</td><td>Convocato→sparito</td><td>—</td><td>—</td><td>—</td><td>ritrovato (Teso)</td><td>—</td><td>la scelta su di lui</td></tr>
+<tr><td class="k">Bedrin</td><td>Fossa (POV)</td><td>Fondamenta</td><td>—</td><td>—</td><td>—</td><td>torna (Pim)</td><td>—</td></tr>
+<tr><td class="k">Mira</td><td>sale al Vertice</td><td>Vertice</td><td>tratta</td><td>—</td><td>entra in Commissione</td><td>scopre la bomba</td><td>terza volontà</td></tr>
+<tr><td class="k">Edran</td><td>compare</td><td>—</td><td>—</td><td>origine svelata</td><td>—</td><td>chiave</td><td>chiave</td></tr>
+</table>
+<p class="note">Paletti: il Patto non sa delle Bestie fino a tardi · Riven non torna mai continuo (ogni lampo costa) · il sovraccarico finale colpisce solo i maghi della bestia di Vaekh · Wick ha un legame libero, diverso dai forzati.</p>
+</section>
+
+<!-- ===================== 7 · SOTTOTRAME ===================== -->
+<section id="sottotrame">
+<h2>⑦ Le sottotrame (con il loro finale)</h2>
+<p class="h2sub">I fili secondari che attraversano la saga e dove si chiudono.</p>
+<table>
+<tr><th>Sottotrama</th><th>Arco e payoff</th></tr>
+<tr><td class="k">Guerra del Sindacato</td><td>Soren ucciso → guerra Maelor vs Nerissa → <b>chiude in L1</b> con lo scatto di Bedrin. Nerissa diventa rete alleata che copre la discesa (L2).</td></tr>
+<tr><td class="k">L'Occhio Spezzato (culto)</td><td>Livia industrializza il dolore (L2–L5); Garek dissente (L2), diserta e muore (L3); Zelo muore della sua fede (L5).</td></tr>
+<tr><td class="k">L'ascesa di Mira</td><td>Caos (L1) → tratta (L3) → entra (L5) → scopre la bomba (L6) → terza volontà (L7). Vince abbastanza.</td></tr>
+<tr><td class="k">Aurel / caso Vaeldrin / Convocato tornato</td><td>La colpa di Aurel (gestì Edran) riemerge: L1 crepa → L4 origine → L7 chiave. Lega Dorian al segreto.</td></tr>
+<tr><td class="k">Wick &amp; il Viandante</td><td>Terrore (L1) → capire cos'è (L4) → affrontare lo specchio → sacrificio (L7).</td></tr>
+<tr><td class="k">Halric</td><td>Tradisce per convinzione a ogni svolta; picco in L6.</td></tr>
+<tr><td class="k">Selene ↔ Riven</td><td>Gloria (vigilia) → dubbio (L1) → Fossa = Esilio (L3) → Riven è un Teso (L5) → scelta su di lui (L7).</td></tr>
+<tr><td class="k">Pim &amp; Bedrin</td><td>Primi segni (L1, seme) → Bedrin torna perché Pim è Convocata (L6).</td></tr>
+<tr><td class="k">La colla del fronte</td><td>Aeris vende verità che peggiorano · Thane salva in silenzio · Nerissa tiene la rete d'informazioni.</td></tr>
+</table>
+</section>
+
+<!-- ===================== 8 · COLPI DI SCENA ===================== -->
+<section id="colpi">
+<h2>⑧ Tutti i colpi di scena</h2>
+<p class="h2sub">Almeno tre per libro. La regola: non "non era questo" ma <b>"era questo, ma significava altro"</b>.</p>
+<div class="card danger"><h3>L1</h3><p>Lucan ucciso dai suoi (aveva smesso di firmare) · la Catena "resistente" è ignaro organo della macchina · Pim mostra i primi segni (la leva su Bedrin non era casuale).</p></div>
+<div class="card danger"><h3>L2</h3><p>Il Viandante è un legame libero che Wick conosceva · la Cicatrice mostra il futuro vero, non le paure · la porta è sorvegliata per impedire che i Tesi siano liberati.</p></div>
+<div class="card danger"><h3>L3</h3><p>Sevran (credente sereno) è la talpa che smonta la macchina da dentro · Thane scende volontariamente a sabotarla · anche la Commissione è "le mani" di qualcosa di più vecchio.</p></div>
+<div class="card danger"><h3>L4</h3><p>Yshar mostra dove porta il metodo (i "grati") · Dorian doveva essere Convocato (la diserzione eroica è una bugia) · il metodo fu un'arma in una faida antica.</p></div>
+<div class="card danger"><h3>L5</h3><p>Riven tiene stabile il canale (liberarlo può far crollare il mondo) · i Tesi sono coscienti e alcuni non vogliono uscire · non c'è nessuna testa: Mira decide di diventarla lei.</p></div>
+<div class="card danger"><h3>L6</h3><p>Tre fazioni (frenatori / spingitori / chi vuole il sovraccarico come rinascita) · Wick scopre che potrebbe regnare sul canale · Bedrin torna perché Pim è stata Convocata.</p></div>
+<div class="card danger"><h3>L7</h3><p>Il monopolio non era il fine (la macchina tratteneva un sovraccarico globale) · il sacrificio di Wick non libera i Tesi: diventa lui la nuova soglia · nessuna vittoria pulita.</p></div>
+</section>
+
+<!-- ===================== 9 · SEMI ===================== -->
+<section id="semi">
+<h2>⑨ Semina → raccolta</h2>
+<p class="h2sub">Ogni dettaglio piantato e dove viene pagato. Niente seme senza raccolta.</p>
+<table>
+<tr><th>Il seme (cosa sembra)</th><th>Dove si paga</th></tr>
+<tr><td>Il vicolo cieco dove il mostro sparisce — <i>inghiottito dal buio</i></td><td>i mostri vanno a punti precisi; il Silenzio li raccoglie (L2; pieno L6)</td></tr>
+<tr><td>Il Silenzio arriva troppo in fretta — <i>efficienza del regime</i></td><td>il Silenzio è infiltrato dalla Commissione (L3)</td></tr>
+<tr><td>Il mostro punta a un punto fisso — <i>follia cieca</i></td><td>i mostri vanno ai nodi e li allargano (L2; pieno L6)</td></tr>
+<tr><td>L'occhio di Riven che non riconosce Selene — <i>emozione della partenza</i></td><td>Riven sta diventando un Teso (L5)</td></tr>
+<tr><td>La festa d'addio / la gloria — <i>onore</i></td><td>un funerale che nessuno sa di celebrare (L5)</td></tr>
+<tr><td>Edran dice "a volte restituiscono" — <i>frase di un reduce grato</i></td><td>i legami slittati = i Tornati (L4/L5)</td></tr>
+<tr><td>I registri di Bedrin — <i>conti di un contabile</i></td><td>contengono lo schema delle Notti: la prova era in tasca da anni (L1)</td></tr>
+<tr><td>Wick prova sollievo, non orrore — <i>vergogna privata</i></td><td>legame libero; base della terza via (L7)</td></tr>
+<tr><td>Pim "sente le cose nel muro" / la chiedono "di sopra" — <i>quirk infantile</i></td><td>Pim è compatibile; torna Convocata (L6)</td></tr>
+<tr><td>Selene: sangue dal naso, abbassa gli occhi — <i>nervi, pudore</i></td><td>la lettura la consuma; colpa trattenuta (L5–L7)</td></tr>
+<tr><td>Il caso Vaeldrin (cognome di Dorian, L1)</td><td>Aurel "gestì" Edran; lega Dorian al segreto (L4); paga al finale (L7)</td></tr>
+<tr><td>La via custodita verso il basso (L2)</td><td>porta a Punto Zero e ai Tesi (L5–L7)</td></tr>
+<tr><td>La Terra Bruciata (L4)</td><td>il sovraccarico: cosa aspetta Vaekh (L6–L7)</td></tr>
+<tr><td>"Il metodo viene da fuori" (L4)</td><td>Vaekh è un esperimento, non l'origine (L6)</td></tr>
+</table>
+</section>
+
+<!-- ===================== 10 · INTRECCI ===================== -->
+<section id="intrecci">
+<h2>⑩ Gli intrecci</h2>
+<p class="h2sub">Le coppie-specchio che si illuminano a vicenda, e i nodi che tengono insieme i fili.</p>
+
+<h3>Gli specchi</h3>
+<div class="row">
+  <div class="card"><p><b>Dorian ↔ Sevran</b><br>il disertore e il credente sereno (chi Dorian sarebbe rimasto).</p></div>
+  <div class="card"><p><b>Wick ↔ Maelor</b><br>il legame libero e il bruto (cosa diventa chi smette di cercare una misura).</p></div>
+  <div class="card"><p><b>Wick ↔ il Viandante</b><br>il legame che regge e quello che si è spezzato.</p></div>
+</div>
+<div class="row">
+  <div class="card"><p><b>Selene ↔ Mira</b><br>due che "leggono" la gente: una per ritrovare il fratello, l'altra per dominarla.</p></div>
+  <div class="card"><p><b>Coss ↔ Thane</b><br>la stessa burocrazia: uno firma le sparizioni, l'altro le sabota.</p></div>
+  <div class="card"><p><b>Livia ↔ Garek</b><br>la mezza-verità portata all'osceno, e la crepa che la abbandona.</p></div>
+</div>
+
+<h3>I nodi (chi tiene insieme i fili)</h3>
+<div class="card secret"><p><b>Selene</b> lega gloria (Riven) e Fossa (le reti) · <b>Dorian</b> lega Patto e disertori · <b>Aeris</b> lega tutti via segreti · <b>Nerissa</b> lega Sindacato, Mira e la discesa · <b>Aurel</b> lega il passato del Patto al Convocato tornato.</p></div>
+
+<h3>Il triangolo (desiderio, mai pulito)</h3>
+<div class="card"><p><b>Wick → Selene → Dorian</b> (e Dorian → Selene, frenato). Una sola scopata nascosta tra Selene e Dorian sotto pressione (L2/L3), mai più nominata; Wick lo intuisce → gelosia. Nessuno "vince": resta storto.</p></div>
+</section>
+
+<p class="legend" style="margin-top:40px;border-top:1px solid var(--line);padding-top:16px">Fonte: tutto il canone in <b>BIBBIA/</b> (01_CANONE, 02_CAST, 03_STRUTTURA_E_MISTERI). Questa pagina è una <b>mappa di lettura</b> per l'autore: in pagina, nel romanzo, il segreto non si nomina mai — trapela.</p>
+</div>

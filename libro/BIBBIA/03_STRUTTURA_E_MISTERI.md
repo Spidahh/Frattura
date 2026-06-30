@@ -79,13 +79,13 @@
 
 # G. COLPI DI SCENA / RIBALTAMENTI (≥3 per libro)
 *CANONE (confermati 2026-06-29). In pagina non si svelano: trapelano e ribaltano "era questo ma significava altro". Quelli non ancora seminati (Sevran talpa, Dorian doveva essere Convocato, faida antica) vanno piantati nei libri indicati prima del loro payoff.*
-- **L1:** Lucan ucciso dai suoi (aveva smesso di firmare gli ordini ciechi) · la Catena "resistente" è ignara organo della macchina · **Pim mostra i primi segni** (la leva su Bedrin non era casuale).
+- **L1:** Lucan ucciso dai suoi (aveva smesso di firmare gli ordini ciechi) · la Catena "resistente" è ignara organo della macchina · **Pim mostra i primi segni** (la leva su Bedrin non era casuale) · **la gloria si compra:** un mercato nero di lettere di Convocazione falsificate — si paga e si lotta per entrare nella propria condanna (`01_CANONE` §2/§13).
 - **L2:** il Viandante è un legame libero che Wick conosceva · la Cicatrice mostra il futuro vero, non le paure · la porta è sorvegliata per impedire che i Tesi siano LIBERATI.
 - **L3:** Sevran (credente sereno) è la talpa che smonta la macchina da dentro · Thane scende volontariamente a sabotarla · anche la Commissione è "le mani" di qualcosa di più vecchio.
 - **L4:** Yshar mostra *dove porta il metodo* (una società che adora la bestia domata, i "grati") · Dorian doveva essere Convocato (la sua diserzione eroica è una bugia) · il metodo fu un'arma in una faida antica (eredità, non un padrone presente).
 - **L5:** Riven tiene stabile il canale (liberarlo può far crollare il mondo) · i Tesi sono coscienti e alcuni NON vogliono uscire · non c'è nessuna testa: Mira decide di diventarla lei.
 - **L6:** tre fazioni (frenatori / spingitori / chi VUOLE il sovraccarico come rinascita) · Wick scopre che potrebbe regnare sul canale (tentazione, non sacrificio) · Bedrin torna perché Pim è stata Convocata.
-- **L7:** il monopolio non era il fine (la macchina tratteneva un sovraccarico globale) · il sacrificio di Wick non libera i Tesi: diventa lui la nuova soglia · nessuna vittoria pulita (Mira vince il vuoto, Riven non è più Riven).
+- **L7:** il monopolio non era il fine (la macchina tratteneva un sovraccarico globale) · il sacrificio di Wick non libera i Tesi: diventa lui la nuova soglia — **da rendere ANTI-catartico: nessuna musica da martire, un cambio di guardia, gelo** · si arriva "in cima" e non c'è nessuno: solo un manuale di procedure che nessun vivente ha firmato (`01_CANONE` §3) · nessuna vittoria pulita (Mira vince il vuoto, Riven non è più Riven).
 
 ---
 
