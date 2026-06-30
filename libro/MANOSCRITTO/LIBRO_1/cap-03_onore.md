@@ -31,7 +31,7 @@ La festa durò fino a tardi. Riven brindò, promise di scrivere; e tutti tornaro
 
 Quando il cortile si svuotò, Selene restò un momento sotto le lanterne spente. Era fiera. Lo era davvero. Suo fratello era stato scelto, e questo non glielo toglieva nessuno.
 
-Eppure, salendo a dormire, si accorse di stringersi il polso nel punto in cui l'aveva abbracciato — come si preme un livido per sentire se fa ancora male. Si fermò, sorpresa di trovarsi addosso quel gesto. Poi lo lasciò andare, e andò a letto.
+Eppure, salendo a dormire, si accorse di stringersi il polso nel punto in cui l'aveva abbracciato — come si preme un livido per sentire se fa ancora male. Si fermò, sorpresa di trovarsi addosso quel gesto. Poi se lo tolse di dosso come si scaccia un pensiero stupido, e salì a dormire.
 
 ---
 <!-- CHECK: apre su un personaggio letto in scena (vedova Corth); Selene viva, con desiderio e autocontrollo; calma liscia + vuoto nudi; costo (fitta/rame); nessun leak; chiude sul livido non spiegato. -->

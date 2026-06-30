@@ -145,6 +145,12 @@ Dal 2026-06-26 l'utente ha confermato: **accetta tutte le decisioni, nessun dubb
 - ✅ **Segnaposto chiusi:** Viandante/Veyne Tal (ruoli in `02_CAST`); Pim (figlia di Bedrin, 8 anni; seme "primi segni" → L6); lettere di Convocazione = Commissione via Corvin, payoff tracciato in `03` §H.
 - ✅ **`DOMANDE_APERTE.md` non contiene più scelte sospese.** Ciò che resta è solo **roadmap** (propagare la voce vicina a L2–L4; scrivere L4 cap-04→07, L5–L7), che vive in `STATO.md` come "prossima mossa", non come dubbio.
 
+### 2026-06-30 — Regola §H "superficie chiara" + riscrittura apertura L1
+*(utente: la 1ª prosa era illeggibile — frasi-indovinello tipo "vendeva facce alla ronda" e frasi scollegate. Direttiva: spiegare i concetti per esteso e legare le frasi.)*
+- ✅ **Regola §H "ARTIGIANATO ITALIANO — la superficie si LEGGE"** aggiunta a `BIBBIA/04_COME_SCRIVERE`. L'anti-leak vale SOLO sul segreto nascosto; i fatti normali si dicono chiari e per esteso. 6 regole + test in 3 righe; richiamo nella checklist di capitolo (§F.11). *(utente: "fai la checklist italiana" → "b")*
+- ✅ **Apertura L1 rivista con §H:** `cap-01_la-cosa` e `cap-02_sfortuna` riscritti (superficie chiara, nomi ancorati, frasi legate); `cap-05_scorie` ancorati "Sindacato" e "Maelor"; `cap-03/04` verificati e tenuti. Restano cap-06→15 da passare alla §H (vedi `STATO.md`).
+- ✅ **`LEGGI_E_STAMPA/Schemi.html` rifatto leggibile:** pagina-glossario "le parole che tornano" + 4 schemi (macchina nascosta · cosa si svela per libro · rotta saga · 15 capitoli L1) con testo spiegato per esteso, non più sigle. *(utente: "gli schemi non si capiscono, spiegali per esteso")*
+
 ### 2026-06-26 — Nota finale
 *(Se in futuro l'utente cambia qualcosa, aggiungere una riga ❌ + nuova scelta, senza cancellare la storia.)*
 

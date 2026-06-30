@@ -7,9 +7,9 @@
 
 Il morto dietro il banco del pesce era uno che Bedrin conosceva.
 
-Fino a un mese prima scaricava casse accanto a lui e si lamentava della schiena. Adesso stava piegato nella melma con la gola aperta e le tasche già rivoltate da qualcun altro. Sul corpo non c'era niente da prendere e niente da capire. C'era solo il messaggio, lasciato bene in vista: la guerra del Sindacato era cominciata, e si combatteva così — un cadavere alla volta, messo dove faceva più paura.
+Fino a un mese prima scaricava casse accanto a lui e si lamentava della schiena. Adesso stava piegato nella melma con la gola aperta e le tasche già rivoltate da qualcun altro. Sul corpo non c'era niente da prendere e niente da capire. C'era solo il messaggio, lasciato bene in vista: la guerra del Sindacato — le bande che si spartivano i traffici della Fossa — era cominciata, e si combatteva così, un cadavere alla volta, messo dove faceva più paura.
 
-A mandare Bedrin a guardarlo era stato Maelor, perché Bedrin guardava e riferiva senza fare domande, ed era una qualità rara, in tempi così.
+A mandare Bedrin a guardarlo era stato Maelor, il padrone della sua strada, perché Bedrin guardava e riferiva senza fare domande, ed era una qualità rara, in tempi così.
 
 Lo trovò che si puliva le unghie col coltello. Maelor faceva tutto lento, perché aveva passato la vita a far aspettare gli altri. Ascoltò il rapporto senza alzare gli occhi, e quando Bedrin finì non disse una parola sul morto.
 

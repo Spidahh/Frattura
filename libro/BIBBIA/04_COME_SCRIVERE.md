@@ -116,7 +116,7 @@ Ensemble, **terza persona limitata, al passato**. Un POV dichiarato per capitolo
 - **Ribaltamento per libro:** ogni libro ribalta almeno personaggio · luogo · fazione · regola magica · obiettivo, più un "falso finale di comprensione". Le rivelazioni: non "non era questo" ma **"era questo, ma significava altro"**.
 - **Ritmo a valli:** respiri a media intensità prima dei picchi; il finale di libro **sale** (eccetto il diminuendo voluto di L7).
 
-**Checklist di capitolo (prima di chiudere):** 1. C'è un pericolo e una domanda in movimento? 2. Lo sfondo resta non nominato/non dedotto? 3. Serve un filo emotivo o pianta/paga un seme? 4. Apre bene e chiude su un gancio? 5. Nomi da `GLOSSARIO`, fatti coerenti? 6. Check guardrail (§G). 7. Il POV ha pensato una cosa troppo giusta? 8. L'indizio è ambiguo o cerchiato? 9. La scena è tesa o solo lunga? 10. Ogni frase è concreta e comprensibile?
+**Checklist di capitolo (prima di chiudere):** 1. C'è un pericolo e una domanda in movimento? 2. Lo sfondo resta non nominato/non dedotto? 3. Serve un filo emotivo o pianta/paga un seme? 4. Apre bene e chiude su un gancio? 5. Nomi da `GLOSSARIO`, fatti coerenti? 6. Check guardrail (§G). 7. Il POV ha pensato una cosa troppo giusta? 8. L'indizio è ambiguo o cerchiato? 9. La scena è tesa o solo lunga? 10. Ogni frase è concreta e comprensibile? 11. **Superficie chiara (§H):** ogni fatto si capisce al primo colpo, niente metafore private, frasi legate.
 
 ---
 
@@ -140,3 +140,19 @@ Ensemble ampio · nessun eletto · nessun protagonista bloccato · personaggi gr
 
 ## Domande obbligatorie (checklist per ogni ipotesi futura — risposte in `01_CANONE`)
 cosa è il mostro · cosa vuole · chi lo sfrutta · cosa vuole il gruppo · come parte la trasformazione · perché solo la Fossa fa mostri visibili · in cosa Fossa ed Esilio sono lo stesso rito · che fine fanno trasformati ed esiliati · perché chi sa non lascia Vaekh · quale finale apre · quale funzione hanno i trasformati · verso quali punti fissi vanno i mostri · perché la versione nobile è camuffata · i cinque strati di verità · dove sta la bestia rispetto al mondo vasto · che scala ha il mondo.
+
+---
+
+# H. ARTIGIANATO ITALIANO — la SUPERFICIE si LEGGE
+*Nato dal difetto del Libro 1 (1ª prosa illeggibile): frasi-indovinello e frasi scollegate. Da applicare a OGNI capitolo, insieme al QA anti-leak.*
+
+**Principio madre:** l'anti-leak (§B, "lascia il dettaglio nudo") vale **SOLO sul segreto nascosto**. I fatti normali — chi è un tale, cos'è la Ronda, dove siamo — si dicono **chiari e per esteso**. *Se la superficie è oscura come il segreto, il capitolo si RISCRIVE, non si lucida.* L'unica cosa che resta misteriosa in una scena è **il meccanismo segreto**; tutto il resto è limpido.
+
+1. **Presenta prima di usare.** Ogni cosa/luogo/ruolo/persona nuovo si spiega con 2–5 parole alla **prima** comparsa, *prima* di appoggiarci una scena ("la Ronda — la guardia della città bassa"; "il Groviglio — il quartiere più basso"). Mai un termine che il lettore deve indovinare.
+2. **Niente metafore private.** Se l'immagine non si capisce al primo colpo da chi non sa **niente** del mondo, è un indovinello: si toglie. ❌ "vendeva facce alla Ronda" → ✅ "faceva la spia: vendeva alla Ronda i nomi di chi si nascondeva." **Test:** la capirebbe un lettore al cap. 1?
+3. **Frasi legate.** Ogni frase tira la successiva con un nesso (causa/conseguenza/contrasto: *e così, perché, eppure, anche così, ma*). Vietato l'elenco di frasi staccate che il lettore deve cucire da sé.
+4. **Show + tell in equilibrio.** Mostra l'azione e il dettaglio, **poi**, quando serve, una frase corta che chiarisce. Solo allusione = illeggibile; solo spiegazione = piatto. Si alterna.
+5. **Concreto batte suggestivo.** Verbo che si vede, oggetto che si tocca. Se una frase è "bella" ma non dice un **fatto**, si taglia (vedi §B "frasi opache").
+6. **Ritmo voluto.** Frasi corte nella tensione, più lunghe nel respiro; la punteggiatura dà il battito. Alterna di proposito lento/veloce.
+
+**Test rapido (3 righe, dopo aver scritto):** (a) un amico che non sa niente del mondo capirebbe **ogni fatto** al primo colpo? (b) ogni frase è agganciata alla precedente? (c) l'unica cosa ancora misteriosa è il **segreto** giusto — non la superficie? *Se una risposta è no → riscrivi.*

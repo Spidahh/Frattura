@@ -1,10 +1,10 @@
 # STATO — cruscotto del progetto "Frattura"
-*Aggiornato 2026-06-29. **Questa è l'UNICA fonte dello stato di avanzamento.** Gli altri file non ripetono i conteggi: rimandano qui.*
+*Aggiornato 2026-06-30. **Questa è l'UNICA fonte dello stato di avanzamento.** Gli altri file non ripetono i conteggi: rimandano qui.*
 
 ## DOVE SIAMO (stato reale, verificato sul filesystem)
 | Libro | Titolo | Capitoli scritti | Note |
 |---|---|---|---|
-| **L1** | Sfortuna | **15/15 ✅** | 2ª riscrittura "voce vicina" (29/06): apre su Wick (`cap-01_la-cosa`). |
+| **L1** | Sfortuna | **15/15 ✅** | 3ª passata "superficie chiara" (§H, 30/06): rifatti cap-01 e cap-02, ancorati i nomi in cap-05. cap-03/04 verificati e tenuti. Restano cap-06→15 da passare alla §H. |
 | **L2** | La Discesa | **9/9 ✅** | voce ancora da riportare alla pelle "vicina" di L1. |
 | **L3** | La Stretta | **9/9 ✅** | idem. |
 | **L4** | La Terra Bruciata | **3/7** | scritti cap-01 Il Sale · cap-02 I Porti · cap-03 Yshar. Mancano cap-04→07. |
@@ -15,11 +15,13 @@
 **Lunghezza per libro (LEGGE):** L1 15 · L2 9 · L3 9 · L4 7 · L5 8 · L6 6 · L7 6.
 
 ## PROSSIMA MOSSA
-1. **Propagare la voce "vicina" di L1 a L2–L4** già scritti.
-2. **Scrivere L4 cap-04→07**, quindi L5–L7.
+1. **Finire la passata §H "superficie chiara" su L1**: cap-06→15 con la stessa regola usata su cap-01/02.
+2. **Propagare voce "vicina" + §H a L2–L4** già scritti.
+3. **Scrivere L4 cap-04→07**, quindi L5–L7.
 *(Audit teoria/documenti del 29/06: **COMPLETATO** — BIBBIA da 22 a 6 file, contraddizioni risolte; vedi `DOMANDE_APERTE.md`.)*
 
 ## COME VUOLE LAVORARE L'UTENTE (rispettare sempre)
+- **SUPERFICIE CHIARA (§H di `BIBBIA/04_COME_SCRIVERE`):** l'anti-leak vale SOLO sul segreto nascosto. I fatti normali si dicono per esteso e chiari; ogni nome/luogo/ruolo si spiega alla prima comparsa; le frasi si legano l'una all'altra; niente metafore private ("vendeva facce" = bocciato). (Feedback 30/06.)
 - **Voce VICINA, non distante:** dentro il POV, niente narratore che spiega, gancio dalla prima riga, niente aforismi. (Feedback 29/06.)
 - **Non stravolgere tutta l'opera da un feedback locale.** Un fastidio su X = intervieni su X. Tieni le SUE frasi. Niente cambi a tappeto senza OK mirato.
 - **Le cose si fanno per bene, finite e coerenti** — non "provvisorie", non lasciate con errori che non si sposano col resto.
