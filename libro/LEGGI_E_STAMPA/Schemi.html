@@ -2,534 +2,338 @@
 <title>Frattura — Schemi</title>
 <style>
 :root{
-  --text-primary:#1a1a1a; --text-secondary:#3f3f3f; --text-muted:#6f6f6f; --text-accent:#7d5ba6;
+  --text-primary:#1a1a1a; --text-secondary:#3a3a3a; --text-muted:#6f6f6f; --text-accent:#7d5ba6;
   --surface-0:#ffffff; --surface-1:#f6f5f3; --surface-2:#ecebe8;
-  --border:#dddddd; --border-strong:#bbbbbb; --border-stronger:#999999;
+  --border:#dddddd; --border-strong:#bbbbbb;
+  --red:#c0392b; --green:#2e8b57;
   --font-sans: system-ui, "Segoe UI", Arial, sans-serif;
 }
 *{box-sizing:border-box}
-body{font-family:var(--font-sans);color:var(--text-primary);background:#fff;margin:0 auto;padding:28px;max-width:1100px;line-height:1.5}
-h1{font-size:28px;margin:0 0 6px}
-.intro{color:var(--text-secondary);font-size:15px;margin:0 0 28px;max-width:760px}
-.schema{margin:0 0 48px;border-top:3px solid var(--border-strong);padding-top:18px}
-.schema h2{font-size:21px;margin:0 0 4px}
-.schema .cap{color:var(--text-secondary);font-size:14px;margin:0 0 14px;max-width:820px}
-.schema svg{width:100%;height:auto;display:block}
+body{font-family:var(--font-sans);color:var(--text-primary);background:#fff;margin:0 auto;padding:32px;max-width:920px;line-height:1.55}
+h1{font-size:30px;margin:0 0 6px}
+.intro{color:var(--text-secondary);font-size:16px;margin:0 0 30px;max-width:760px}
 
-/* --- pagina glossario --- */
-.gloss{margin:0 0 48px;border-top:3px solid var(--border-strong);padding-top:18px}
-.gloss h2{font-size:21px;margin:0 0 4px}
-.gloss .cap{color:var(--text-secondary);font-size:14px;margin:0 0 18px;max-width:820px}
-.gloss dl{display:grid;grid-template-columns:1fr 1fr;gap:14px 36px;margin:0}
-.gloss dt{font-weight:700;font-size:15px;color:var(--text-primary);margin-bottom:2px}
-.gloss dd{margin:0 0 12px;font-size:14px;color:var(--text-secondary);line-height:1.45}
+.schema{margin:0 0 52px;border-top:3px solid var(--border-strong);padding-top:20px}
+.schema h2{font-size:23px;margin:0 0 4px}
+.schema .cap{color:var(--text-secondary);font-size:15px;margin:0 0 18px;max-width:780px}
+.schema svg{width:100%;height:auto;display:block;margin:0 0 6px}
+
+/* blocco di spiegazione scritta sotto ogni disegno */
+.spiega{background:var(--surface-1);border-left:5px solid var(--text-accent);border-radius:0 8px 8px 0;padding:18px 22px;font-size:16px;line-height:1.65;color:var(--text-secondary)}
+.spiega .how{display:block;font-size:12.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--text-accent);margin:0 0 12px}
+.spiega p{margin:0 0 14px}
+.spiega p:last-child{margin-bottom:0}
+.spiega b{color:var(--text-primary)}
+
+/* tabella libro per libro */
+table.libri{width:100%;border-collapse:collapse;font-size:15px;margin:0 0 6px}
+table.libri th,table.libri td{border:1px solid var(--border);padding:11px 13px;text-align:left;vertical-align:top;line-height:1.5}
+table.libri th{background:var(--surface-2);font-size:13px;letter-spacing:.4px}
+table.libri .lib{font-weight:700;white-space:nowrap;width:130px}
+table.libri .gen{display:block;font-weight:400;font-size:12.5px;color:var(--text-accent);margin-top:3px}
+table.libri td.tw{color:var(--red)}
+table.libri tr:nth-child(even) td{background:#fbfaf9}
+
+/* elenco capitoli */
+ol.caps{margin:0;padding:0 0 0 4px;list-style:none;counter-reset:c}
+ol.caps li{position:relative;padding:9px 0 9px 92px;border-bottom:1px solid var(--border);font-size:15px;line-height:1.5}
+ol.caps li:last-child{border-bottom:none}
+ol.caps .n{position:absolute;left:0;top:9px;width:78px;font-weight:700;font-size:13px}
+ol.caps b{color:var(--text-primary)}
+
+/* glossario */
+.gloss{margin:0 0 52px;border-top:3px solid var(--border-strong);padding-top:20px}
+.gloss h2{font-size:23px;margin:0 0 4px}
+.gloss .cap{color:var(--text-secondary);font-size:15px;margin:0 0 18px;max-width:780px}
+.gloss dl{margin:0}
+.gloss dt{font-weight:700;font-size:17px;color:var(--text-primary);margin:16px 0 3px}
+.gloss dd{margin:0;font-size:16px;color:var(--text-secondary);line-height:1.6}
 .gloss dd .pin{color:var(--text-muted);font-style:italic}
 
-@page{ size: A4 landscape; margin: 10mm; }
+@page{ size: A4 portrait; margin: 14mm; }
 @media print{
-  body{padding:0;max-width:none}
+  body{padding:0;max-width:none;font-size:11pt}
   h1,.intro{display:none}
-  .schema,.gloss{page-break-after:always;border-top:none;margin:0;padding:0}
-  .schema:last-child{page-break-after:auto}
-  .schema svg{max-height:18cm}
-  .gloss dl{grid-template-columns:1fr 1fr;gap:10px 30px}
+  .gloss,.schema{page-break-before:always;border-top:none;margin:0 0 10mm;padding:0}
+  .spiega,table.libri,ol.caps li,svg{page-break-inside:avoid}
 }
 </style>
 
 <h1>FRATTURA — Schemi della saga</h1>
-<p class="intro">Cinque pagine. La prima spiega <b>le parole che tornano</b> (i nomi inventati): leggila per prima. Poi quattro schemi: la macchina nascosta del mondo · cosa si scopre libro per libro · la rotta dei 7 libri · i 15 capitoli del Libro 1. Per stampare: apri questo file nel browser → Stampa (Ctrl/Cmd+P), orientamento orizzontale.</p>
+<p class="intro">Cinque sezioni. La prima è il <b>glossario</b>: i nomi inventati spiegati in parole semplici (leggila per prima). Le altre quattro sono gli schemi: ognuno ha un <b>disegno</b> e, sotto, una <b>spiegazione scritta per esteso</b> che racconta cosa stai guardando — pensata per chi non ha mai letto niente della storia. Per stampare: apri nel browser → Stampa (Ctrl/Cmd+P).</p>
 
 <!-- ============================ GLOSSARIO ============================ -->
 <section class="gloss">
-<h2>Le parole che tornano</h2>
-<p class="cap">Negli schemi compaiono dei nomi inventati. Qui c'è cosa vogliono dire, in parole semplici. Se uno schema non ti torna, è quasi sempre perché un nome qui sotto non era chiaro.</p>
+<h2>0 · Le parole che tornano</h2>
+<p class="cap">Negli schemi compaiono dei nomi inventati. Qui c'è cosa vogliono dire. Se uno schema non ti torna, quasi sempre è perché uno di questi nomi non era chiaro.</p>
 <dl>
   <dt>La Bestia</dt>
-  <dd>Una creatura enorme e addormentata sotto la città. È la <b>sorgente della magia</b>: nel mondo la magia esiste solo perché ci si lega a una Bestia.</dd>
+  <dd>Una creatura enorme e addormentata sepolta sotto la città. È la <b>sorgente di tutta la magia</b>: nel mondo di Frattura la magia esiste solo perché qualcuno riesce a collegarsi a una Bestia.</dd>
 
   <dt>Il legame (uomo–bestia)</dt>
-  <dd>Collegare una persona alla Bestia: così la magia le passa attraverso. Di solito succede <b>per caso</b>; la Commissione invece lo <b>forza</b> con un rito.</dd>
+  <dd>Il collegamento tra una persona e la Bestia: quando si crea, la magia passa attraverso quella persona. Di solito succede <b>per caso</b> e a pochissimi; la Commissione, invece, prova a <b>forzarlo</b> con un rito.</dd>
 
   <dt>Il Patto (di Ferro)</dt>
-  <dd>Il regime che comanda la città in piena vista, tipo dittatura. È il <b>nemico visibile</b> — ma non sa niente del segreto vero. <span class="pin">il nemico che vedi</span></dd>
+  <dd>Il regime che comanda la città alla luce del sole, una specie di dittatura. È il <b>nemico che tutti vedono</b> — eppure non sa niente del segreto vero. <span class="pin">il nemico in vista</span></dd>
 
   <dt>La Commissione</dt>
-  <dd>Il <b>vero</b> gruppo segreto dietro tutto. Sfrutta la Bestia. È nascosto perfino al Patto. <span class="pin">il nemico che non vedi</span></dd>
+  <dd>Il <b>vero</b> gruppo di potere, segreto, che sta dietro tutto e sfrutta la Bestia. È nascosto perfino al Patto. <span class="pin">il nemico che nessuno vede</span></dd>
 
   <dt>Il Silenzio</dt>
-  <dd>La polizia segreta del Patto, quella che fa sparire la gente. La Commissione l'ha <b>infiltrata</b> e la usa per procurarsi le cavie e zittire chi capisce troppo.</dd>
+  <dd>La polizia segreta del Patto, quella che fa sparire le persone scomode. La Commissione l'ha <b>infiltrata</b> e la usa per procurarsi le cavie del rito e zittire chi capisce troppo.</dd>
 
   <dt>La Convocazione</dt>
-  <dd>Il rito travestito da <b>onore</b>: i «migliori» vengono scelti e portati via tra gli applausi. In realtà sono <b>cavie</b>. <span class="pin">la faccia gloriosa della trappola</span></dd>
+  <dd>Il rito travestito da <b>onore</b>: i «migliori» vengono scelti e portati via tra gli applausi, e nessuno osa chiedere dove finiscano. In verità sono cavie. <span class="pin">la trappola con la faccia gloriosa</span></dd>
 
   <dt>La Fossa</dt>
-  <dd>Il fondo povero della città (che è verticale). Lì capitano le «Notti». La gente la crede un posto <b>sfortunato, maledetto</b>.</dd>
+  <dd>Il fondo povero della città (che è costruita in verticale). È lì che capitano le «Notti», e per questo la gente la considera un posto <b>sfortunato, quasi maledetto</b>.</dd>
 
   <dt>Le Notti</dt>
-  <dd>Quando una persona <b>si trasforma in mostro</b>. Sembrano casuali; non lo sono: è il legame forzato che si spezza.</dd>
+  <dd>I momenti in cui una persona <b>si trasforma in mostro</b>, di solito di notte e nella Fossa. Sembrano casuali; non lo sono: è il legame forzato che si spezza.</dd>
 
   <dt>I Tesi</dt>
-  <dd>Le poche persone su cui il legame <b>regge</b> invece di spezzarsi. Vengono tenute vive e coscienti, <b>prigioniere</b>, in fondo a Punto Zero.</dd>
+  <dd>Le poche persone su cui il legame, invece di spezzarsi, <b>tiene</b>. Vengono tenute vive e coscienti, ma <b>prigioniere</b>, in fondo a Punto Zero.</dd>
 
   <dt>Punto Zero</dt>
-  <dd>Il punto <b>più profondo</b> del sottosuolo, dove la Commissione tiene rinchiusi i Tesi. È la meta finale della saga.</dd>
+  <dd>Il punto <b>più profondo</b> del sottosuolo, dove la Commissione tiene rinchiusi i Tesi. È la meta verso cui scende tutta la saga.</dd>
 
   <dt>Il canale</dt>
-  <dd>Il «tubo» verso la Bestia che il rito tiene aperto e allarga. Importante: <b>non nutre</b> la Bestia, la <b>addestra</b> — serve a controllarla.</dd>
+  <dd>Immagina un «tubo» che collega gli uomini alla Bestia: il rito lo tiene aperto e lo allarga. Attenzione, <b>non serve a nutrire</b> la Bestia, ma ad <b>addestrarla</b> e tenerla sotto controllo.</dd>
 
   <dt>Il monopolio</dt>
-  <dd>Lo <b>scopo vero</b> di tutto: controllare la Bestia significa decidere chi, in tutto il mondo, può fare magia.</dd>
+  <dd>Lo <b>scopo finale</b> di tutto: chi riesce a controllare la Bestia decide chi, in tutto il mondo, può fare magia. È il vero premio in palio.</dd>
 
   <dt>Il sovraccarico</dt>
-  <dd>Quando la Bestia viene spinta troppo: <b>impazzisce e si ribella</b>. È già successo una volta — il posto si chiama «Terra Bruciata».</dd>
+  <dd>Quello che succede se la Bestia viene spinta troppo oltre: <b>impazzisce e si ribella</b>. È già accaduto una volta, e ha lasciato un luogo morto chiamato «Terra Bruciata».</dd>
 
   <dt>Vaekh</dt>
-  <dd>La città verticale dove comincia tutto: ricchi in alto (il Vertice), poveri in basso (la Fossa), il segreto ancora più sotto (le Fondamenta, fino a Punto Zero).</dd>
+  <dd>La città verticale dove comincia la storia: i ricchi in alto (il Vertice), i poveri in basso (la Fossa), e il segreto ancora più sotto (le Fondamenta, fino a Punto Zero).</dd>
 </dl>
 </section>
 
 <!-- ============================ SCHEMA 1 ============================ -->
 <section class="schema">
 <h2>1 · La macchina nascosta</h2>
-<p class="cap">Il «trucco» segreto del mondo. In alto: cosa <b>crede</b> la gente. Sotto la riga: cosa <b>succede davvero</b> — la parte che nessun personaggio dice mai ad alta voce, e che il lettore ricostruisce libro dopo libro.</p>
-<svg viewBox="0 0 1120 880" xmlns="http://www.w3.org/2000/svg" role="img" font-family="var(--font-sans, system-ui)">
-<title>La macchina nascosta di Frattura</title>
+<p class="cap">Il «trucco» segreto del mondo. In alto quello che la gente crede; sotto la linea tratteggiata quello che succede davvero. Il disegno fa da mappa; la spiegazione sotto lo racconta tutto.</p>
+<svg viewBox="0 0 1000 660" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>La macchina nascosta</title>
 <defs>
-<marker id="ar" markerWidth="11" markerHeight="11" refX="8" refY="3.2" orient="auto"><path d="M0,0 L9,3.2 L0,6.4 Z" fill="var(--text-muted,#888)"/></marker>
-<marker id="arR" markerWidth="11" markerHeight="11" refX="8" refY="3.2" orient="auto"><path d="M0,0 L9,3.2 L0,6.4 Z" fill="#c0392b"/></marker>
+<marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#888"/></marker>
+<marker id="arR" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/></marker>
 <style>
-.t{fill:var(--text-primary,#1a1a1a);font-weight:700;font-size:15px}
-.s{fill:var(--text-secondary,#3f3f3f);font-size:13px}
-.lbl{fill:var(--text-muted,#777);font-size:14px;font-weight:700;letter-spacing:.5px}
-.box{fill:var(--surface-1,#f6f5f3);stroke:var(--border-strong,#bbb);stroke-width:1.5}
-.sec{fill:var(--surface-2,#ecebe8);stroke:#7d5ba6;stroke-width:1.8}
-.dang{fill:#f7efee;stroke:#c0392b;stroke-width:1.8}
-.acc{fill:#eee9f3;stroke:#7d5ba6;stroke-width:2}
-.ln{stroke:var(--text-muted,#888);stroke-width:1.8;fill:none}
+.bx{fill:#f6f5f3;stroke:#bbb;stroke-width:1.5}
+.sc{fill:#ecebe8;stroke:#7d5ba6;stroke-width:1.8}
+.dg{fill:#f7efee;stroke:#c0392b;stroke-width:1.8}
+.ac{fill:#eee9f3;stroke:#7d5ba6;stroke-width:2.2}
+.gn{fill:#eef6f1;stroke:#2e8b57;stroke-width:2}
+.t{font-family:system-ui,Arial,sans-serif;font-size:16px;font-weight:700;fill:#1a1a1a}
+.lb{font-family:system-ui,Arial,sans-serif;font-size:14px;font-weight:700;fill:#777;letter-spacing:.5px}
+.it{font-family:system-ui,Arial,sans-serif;font-size:14px;font-style:italic;fill:#555}
+.ln{stroke:#888;stroke-width:1.8;fill:none}
 .lnR{stroke:#c0392b;stroke-width:1.8;fill:none}
 </style>
 </defs>
 
-<text x="24" y="34" class="t" font-size="22">LA MACCHINA NASCOSTA</text>
+<text x="20" y="30" class="lb">QUELLO CHE CREDE LA GENTE</text>
+<rect class="bx" x="20" y="42" width="300" height="46" rx="9"/><text x="170" y="70" class="t" text-anchor="middle">Convocazione = «onore»</text>
+<rect class="bx" x="350" y="42" width="300" height="46" rx="9"/><text x="500" y="70" class="t" text-anchor="middle">Fossa = «sfortuna»</text>
+<rect class="bx" x="680" y="42" width="300" height="46" rx="9"/><text x="830" y="70" class="t" text-anchor="middle">Patto = nemico in vista</text>
 
-<!-- SUPERFICIE -->
-<text x="24" y="74" class="lbl">QUELLO CHE CREDE LA GENTE (la superficie)</text>
-<rect class="box" x="24" y="88" width="340" height="96" rx="10"/>
-<text x="194" y="116" class="t" text-anchor="middle">La Convocazione sembra una GLORIA</text>
-<text x="194" y="142" class="s" text-anchor="middle">I «migliori» vengono scelti e portati</text>
-<text x="194" y="162" class="s" text-anchor="middle">via tra gli applausi: sembra un onore.</text>
+<line x1="20" y1="108" x2="980" y2="108" class="ln" stroke-dasharray="6 6"/>
+<text x="500" y="102" class="it" text-anchor="middle">…sotto, nessuno lo dice mai ad alta voce…</text>
 
-<rect class="box" x="390" y="88" width="340" height="96" rx="10"/>
-<text x="560" y="116" class="t" text-anchor="middle">La Fossa sembra SFORTUNA</text>
-<text x="560" y="142" class="s" text-anchor="middle">Nel fondo della città capitano le</text>
-<text x="560" y="162" class="s" text-anchor="middle">«Notti»: sembrano una maledizione.</text>
+<text x="20" y="140" class="lb" fill="#7d5ba6">QUELLO CHE SUCCEDE DAVVERO</text>
+<rect class="sc" x="350" y="150" width="300" height="46" rx="9"/><text x="500" y="178" class="t" text-anchor="middle">LA COMMISSIONE</text>
+<line x1="500" y1="196" x2="500" y2="222" class="ln" marker-end="url(#ar)"/>
 
-<rect class="box" x="756" y="88" width="340" height="96" rx="10"/>
-<text x="926" y="116" class="t" text-anchor="middle">Il Patto sembra IL nemico</text>
-<text x="926" y="142" class="s" text-anchor="middle">Il regime che comanda alla luce del</text>
-<text x="926" y="162" class="s" text-anchor="middle">sole. Ma non sa il segreto vero.</text>
+<rect class="sc" x="330" y="226" width="340" height="46" rx="9"/><text x="500" y="254" class="t" text-anchor="middle">Il rito lega le «cavie» alla Bestia</text>
+<rect class="dg" x="20" y="226" width="260" height="46" rx="9"/><text x="150" y="254" class="t" text-anchor="middle">IL SILENZIO</text>
+<line x1="280" y1="249" x2="328" y2="249" class="lnR" marker-end="url(#arR)"/>
 
-<line x1="24" y1="212" x2="1096" y2="212" class="ln" stroke-dasharray="6 6"/>
-<text x="560" y="204" class="s" text-anchor="middle" font-style="italic">…sotto, però, gira un'altra cosa che nessun personaggio dice mai ad alta voce…</text>
+<line x1="430" y1="272" x2="300" y2="306" class="ln" marker-end="url(#ar)"/>
+<line x1="570" y1="272" x2="700" y2="306" class="ln" marker-end="url(#ar)"/>
+<rect class="dg" x="60" y="310" width="340" height="46" rx="9"/><text x="230" y="338" class="t" text-anchor="middle">si spezza → MOSTRI («Notti»)</text>
+<rect class="sc" x="600" y="310" width="340" height="46" rx="9"/><text x="770" y="338" class="t" text-anchor="middle">regge → i TESI (Punto Zero)</text>
 
-<!-- LA MACCHINA -->
-<text x="24" y="248" class="lbl" fill="#7d5ba6">QUELLO CHE SUCCEDE DAVVERO (la macchina — mai nominata in pagina)</text>
+<line x1="230" y1="356" x2="470" y2="392" class="ln" marker-end="url(#ar)"/>
+<line x1="770" y1="356" x2="530" y2="392" class="ln" marker-end="url(#ar)"/>
+<rect class="ac" x="330" y="396" width="340" height="46" rx="9"/><text x="500" y="424" class="t" text-anchor="middle">si allarga il «canale» verso la Bestia</text>
+<line x1="500" y1="442" x2="500" y2="468" class="ln" marker-end="url(#ar)"/>
+<rect class="ac" x="330" y="472" width="340" height="48" rx="9" stroke-width="2.8"/><text x="500" y="501" class="t" text-anchor="middle">SCOPO: MONOPOLIO della magia</text>
 
-<rect class="sec" x="400" y="262" width="320" height="74" rx="10"/>
-<text x="560" y="290" class="t" text-anchor="middle">LA COMMISSIONE</text>
-<text x="560" y="314" class="s" text-anchor="middle">Un gruppo segreto dietro tutto.</text>
-<text x="560" y="330" class="s" text-anchor="middle">Nascosto perfino al Patto.</text>
-<line x1="560" y1="336" x2="560" y2="366" class="ln" marker-end="url(#ar)"/>
-
-<rect class="sec" x="360" y="370" width="400" height="84" rx="10"/>
-<text x="560" y="398" class="t" text-anchor="middle">FORZA il legame uomo–bestia (il rito)</text>
-<text x="560" y="422" class="s" text-anchor="middle">Prende delle persone — le «cavie» Convocate —</text>
-<text x="560" y="440" class="s" text-anchor="middle">e le lega a forza alla Bestia che dorme sotto la città.</text>
-
-<rect class="dang" x="24" y="372" width="300" height="92" rx="10"/>
-<text x="174" y="398" class="t" text-anchor="middle">IL SILENZIO</text>
-<text x="174" y="422" class="s" text-anchor="middle">La polizia segreta del Patto, ma</text>
-<text x="174" y="440" class="s" text-anchor="middle">infiltrata dalla Commissione: procura</text>
-<text x="174" y="456" class="s" text-anchor="middle">le cavie e fa sparire chi capisce.</text>
-<line x1="324" y1="416" x2="358" y2="416" class="lnR" marker-end="url(#arR)"/>
-
-<!-- due esiti del rito -->
-<line x1="490" y1="454" x2="320" y2="496" class="ln" marker-end="url(#ar)"/>
-<line x1="630" y1="454" x2="800" y2="496" class="ln" marker-end="url(#ar)"/>
-
-<rect class="dang" x="40" y="500" width="380" height="96" rx="10"/>
-<text x="230" y="528" class="t" text-anchor="middle">Sul PIÙ delle cavie il legame SI SPEZZA</text>
-<text x="230" y="554" class="s" text-anchor="middle">→ diventano MOSTRI: sono le «Notti» nella</text>
-<text x="230" y="572" class="s" text-anchor="middle">Fossa. Vengono abbattuti o rinchiusi.</text>
-
-<rect class="sec" x="700" y="500" width="396" height="96" rx="10"/>
-<text x="898" y="528" class="t" text-anchor="middle">Su POCHI il legame REGGE → i «TESI»</text>
-<text x="898" y="554" class="s" text-anchor="middle">Spariscono spacciati per «gloria» e finiscono</text>
-<text x="898" y="572" class="s" text-anchor="middle">prigionieri, vivi, in fondo a PUNTO ZERO.</text>
-
-<line x1="230" y1="596" x2="470" y2="636" class="ln" marker-end="url(#ar)"/>
-<line x1="898" y1="596" x2="650" y2="636" class="ln" marker-end="url(#ar)"/>
-
-<rect class="acc" x="360" y="640" width="400" height="74" rx="10"/>
-<text x="560" y="668" class="t" text-anchor="middle">Tenere i Tesi sulla soglia ALLARGA il «canale»</text>
-<text x="560" y="692" class="s" text-anchor="middle">verso la Bestia. Non la nutre: la ADDESTRA.</text>
-<line x1="560" y1="714" x2="560" y2="740" class="ln" marker-end="url(#ar)"/>
-
-<rect class="acc" x="360" y="744" width="400" height="76" rx="10" stroke-width="2.6"/>
-<text x="560" y="772" class="t" text-anchor="middle">LO SCOPO VERO: il MONOPOLIO della magia</text>
-<text x="560" y="796" class="s" text-anchor="middle">Chi controlla la Bestia decide chi, in tutto</text>
-<text x="560" y="814" class="s" text-anchor="middle">il mondo, può fare magia. È questo il premio.</text>
-
-<!-- sovraccarico -->
-<line x1="760" y1="676" x2="804" y2="700" class="lnR" marker-end="url(#arR)"/>
-<rect class="dang" x="810" y="640" width="286" height="96" rx="10"/>
-<text x="953" y="666" class="t" text-anchor="middle">Se la spingono troppo →</text>
-<text x="953" y="686" class="t" text-anchor="middle">SOVRACCARICO</text>
-<text x="953" y="710" class="s" text-anchor="middle">La Bestia impazzisce e si ribella.</text>
-<text x="953" y="728" class="s" text-anchor="middle">È già successo: la «Terra Bruciata».</text>
-
-<!-- Wick -->
-<rect class="box" x="24" y="640" width="300" height="96" rx="10" stroke="#2e8b57" stroke-width="2.2"/>
-<text x="174" y="666" class="t" text-anchor="middle" fill="#2e8b57">WICK — l'imprevisto</text>
-<text x="174" y="690" class="s" text-anchor="middle">Si è legato alla Bestia per caso, da solo:</text>
-<text x="174" y="708" class="s" text-anchor="middle">non è né mostro né Teso. È la «terza via»</text>
-<text x="174" y="726" class="s" text-anchor="middle">del finale (il sacrificio).</text>
-
-<!-- legenda -->
-<rect x="24" y="852" width="16" height="16" class="box" rx="3"/><text x="48" y="865" class="s">la superficie (cosa si crede)</text>
-<rect x="250" y="852" width="16" height="16" class="sec" rx="3"/><text x="274" y="865" class="s">il segreto (la Commissione)</text>
-<rect x="470" y="852" width="16" height="16" class="dang" rx="3"/><text x="494" y="865" class="s">orrore / pericolo</text>
-<rect x="650" y="852" width="16" height="16" class="acc" rx="3"/><text x="674" y="865" class="s">lo scopo vero</text>
+<line x1="670" y1="419" x2="708" y2="440" class="lnR" marker-end="url(#arR)"/>
+<rect class="dg" x="700" y="396" width="280" height="66" rx="9"/><text x="840" y="424" class="t" text-anchor="middle">SOVRACCARICO →</text><text x="840" y="446" class="t" text-anchor="middle">la Bestia si ribella</text>
+<rect class="gn" x="20" y="396" width="260" height="66" rx="9"/><text x="150" y="424" class="t" text-anchor="middle" fill="#2e8b57">WICK</text><text x="150" y="446" class="t" text-anchor="middle" fill="#2e8b57">l'imprevisto</text>
 </svg>
+<div class="spiega">
+<span class="how">Come si legge questo disegno</span>
+<p>Leggilo dall'alto verso il basso. In <b>alto</b> c'è la superficie, cioè il mondo come lo vede la gente comune: per loro la <b>Convocazione</b> è un onore, la <b>Fossa</b> è solo un quartiere sfortunato, e il nemico è il <b>Patto</b>, il regime che comanda in piazza. Tutto qui — di più non sanno.</p>
+<p>Sotto la linea tratteggiata c'è la <b>verità</b>, quella che nessun personaggio dice mai. Dietro il Patto si nasconde un gruppo segreto, la <b>Commissione</b>. La Commissione prende delle persone — le «cavie» — e con un rito le lega a forza alla <b>Bestia</b> addormentata sotto la città. Per procurarsi quelle persone e mettere a tacere chi capisce, si serve della polizia segreta del Patto, il <b>Silenzio</b> (la freccia rossa).</p>
+<p>Il rito può finire in due modi. Sulla <b>maggior parte</b> delle cavie il legame <b>si spezza</b>: quelle persone diventano i mostri delle «Notti» nella Fossa. Su <b>pochi</b>, invece, il legame <b>tiene</b>: sono i <b>Tesi</b>, che spariscono spacciati per «gloria» (ecco la Convocazione) e vengono rinchiusi vivi in fondo a <b>Punto Zero</b>.</p>
+<p>Tenere i Tesi su quella soglia serve a una cosa sola: allargare il <b>«canale»</b> verso la Bestia, cioè addestrarla. E chi controlla la Bestia controlla la magia del mondo intero: è questo lo scopo vero, il <b>monopolio</b>. Il rischio (in rosso a destra) è il <b>sovraccarico</b>: se la spingono troppo, la Bestia impazzisce e si ribella — è già successo una volta, nella Terra Bruciata.</p>
+<p>In mezzo a tutto, <b>Wick</b> (in verde) è l'imprevisto: si è legato alla Bestia <b>per caso</b>, da solo, senza passare dal rito. Non è né un mostro né un Teso — ed è proprio per questo che alla fine può diventare la «terza via».</p>
+</div>
 </section>
 
 <!-- ============================ SCHEMA 2 ============================ -->
 <section class="schema">
 <h2>2 · Cosa si scopre, libro per libro</h2>
-<p class="cap">Una riga per ogni libro (dal 1 al 7). A sinistra: cosa <b>capisce il lettore</b> in quel libro. A destra (in rosso): il <b>colpo di scena</b>, il ribaltamento che cambia le carte in tavola. Niente di tutto questo viene detto in chiaro nel romanzo: trapela.</p>
-<svg viewBox="0 0 1120 920" xmlns="http://www.w3.org/2000/svg" font-family="var(--font-sans, system-ui)" role="img">
-<title>Cosa si scopre e i colpi di scena, libro per libro</title>
-<defs>
-<marker id="a2" markerWidth="11" markerHeight="11" refX="7" refY="3.2" orient="auto"><path d="M0,0 L9,3.2 L0,6.4 Z" fill="var(--text-muted,#888)"/></marker>
-<style>
-.t{fill:var(--text-primary,#1a1a1a);font-weight:700}
-.s{fill:var(--text-secondary,#3f3f3f);font-size:13px}
-.h{fill:var(--text-muted,#777);font-size:13px;font-weight:700;letter-spacing:.4px}
-.badge{fill:var(--surface-2,#ecebe8);stroke:var(--border-strong,#bbb);stroke-width:1.5}
-.rev{fill:var(--surface-1,#f6f5f3);stroke:var(--border-strong,#bbb);stroke-width:1.4}
-.tw{fill:#f7efee;stroke:#c0392b;stroke-width:1.5}
-.gen{fill:var(--text-accent,#7d5ba6);font-size:12px;font-weight:700}
-</style>
-</defs>
-<text x="24" y="34" class="t" font-size="22">COSA SI SCOPRE · E I COLPI DI SCENA</text>
-<text x="24" y="58" class="s">Ogni libro svela uno strato di verità e ne nasconde un altro più sotto.</text>
-
-<text x="40" y="92" class="h">IL LIBRO</text>
-<text x="208" y="92" class="h">COSA CAPISCE IL LETTORE</text>
-<text x="616" y="92" class="h" fill="#c0392b">IL COLPO DI SCENA</text>
-
-<!-- L1 -->
-<rect class="badge" x="28" y="104" width="172" height="96" rx="9"/>
-<text x="44" y="134" class="t" font-size="16">L1 · Sfortuna</text>
-<text x="44" y="158" class="gen">indagine / thriller</text>
-<rect class="rev" x="208" y="104" width="388" height="96" rx="9"/>
-<text x="224" y="138" class="s">Le «Notti» (gli uomini che diventano mostri)</text>
-<text x="224" y="160" class="s">non sono casuali: qualcuno le provoca e le copre.</text>
-<rect class="tw" x="604" y="104" width="492" height="96" rx="9"/>
-<text x="620" y="134" class="s">Lucan, il prefetto che indagava, è ucciso dai suoi (aveva</text>
-<text x="620" y="156" class="s">smesso di coprire). Pim, la bambina, mostra i primi segni:</text>
-<text x="620" y="178" class="s">prenderla in ostaggio non era un caso.</text>
-
-<!-- L2 -->
-<rect class="badge" x="28" y="210" width="172" height="96" rx="9"/>
-<text x="44" y="240" class="t" font-size="16">L2 · La Discesa</text>
-<text x="44" y="264" class="gen">avventura + horror</text>
-<rect class="rev" x="208" y="210" width="388" height="96" rx="9"/>
-<text x="224" y="244" class="s">Dove finiscono i mostri (i «varchi» del sottosuolo) e la</text>
-<text x="224" y="266" class="s">«Cicatrice», un luogo che sembra «leggere e correggere».</text>
-<rect class="tw" x="604" y="210" width="492" height="96" rx="9"/>
-<text x="620" y="244" class="s">La via verso il basso è sorvegliata apposta: per impedire</text>
-<text x="620" y="266" class="s">che i Tesi (i prigionieri) vengano liberati.</text>
-
-<!-- L3 -->
-<rect class="badge" x="28" y="316" width="172" height="96" rx="9"/>
-<text x="44" y="346" class="t" font-size="16">L3 · La Stretta</text>
-<text x="44" y="370" class="gen">assedio + spionaggio</text>
-<rect class="rev" x="208" y="316" width="388" height="96" rx="9"/>
-<text x="224" y="350" class="s">Dietro il Patto c'è un gruppo segreto: la Commissione.</text>
-<text x="224" y="372" class="s">E la «Fossa = sfortuna» era in realtà un Esilio organizzato.</text>
-<rect class="tw" x="604" y="316" width="492" height="96" rx="9"/>
-<text x="620" y="350" class="s">Sevran, il credente sereno e insospettabile, è la talpa</text>
-<text x="620" y="372" class="s">che sta smontando la macchina dall'interno.</text>
-
-<!-- L4 -->
-<rect class="badge" x="28" y="422" width="172" height="96" rx="9"/>
-<text x="44" y="452" class="t" font-size="16">L4 · Terra Bruciata</text>
-<text x="44" y="476" class="gen">caccia nel mondo</text>
-<rect class="rev" x="208" y="422" width="388" height="96" rx="9"/>
-<text x="224" y="456" class="s">Esistono altre Bestie e altri popoli; il metodo del rito</text>
-<text x="224" y="478" class="s">viene da fuori. La «Terra Bruciata»: una Bestia già caduta.</text>
-<rect class="tw" x="604" y="422" width="492" height="96" rx="9"/>
-<text x="620" y="456" class="s">Dorian, l'eroe disertore, doveva essere Convocato:</text>
-<text x="620" y="478" class="s">la sua fuga «eroica» è una bugia.</text>
-
-<!-- L5 -->
-<rect class="badge" x="28" y="528" width="172" height="96" rx="9"/>
-<text x="44" y="558" class="t" font-size="16">L5 · I Tesi</text>
-<text x="44" y="582" class="gen">resa dei conti</text>
-<rect class="rev" x="208" y="528" width="388" height="96" rx="9"/>
-<text x="224" y="562" class="s">Il rito forza il legame; i «Tesi» esistono davvero; Riven</text>
-<text x="224" y="584" class="s">(fratello di Selene) è uno di loro. Lo scopo: il monopolio.</text>
-<rect class="tw" x="604" y="528" width="492" height="96" rx="9"/>
-<text x="620" y="562" class="s">Liberare Riven potrebbe far crollare il mondo. E manca</text>
-<text x="620" y="584" class="s">una guida: Mira decide di prendersi quel ruolo.</text>
-
-<!-- L6 -->
-<rect class="badge" x="28" y="634" width="172" height="96" rx="9"/>
-<text x="44" y="664" class="t" font-size="16">L6 · La Spaccatura</text>
-<text x="44" y="688" class="gen">corsa contro il tempo</text>
-<rect class="rev" x="208" y="634" width="388" height="96" rx="9"/>
-<text x="224" y="668" class="s">Le Bestie e il «sovraccarico»: la Bestia sotto la città è</text>
-<text x="224" y="690" class="s">quasi al limite. È una corsa contro il tempo.</text>
-<rect class="tw" x="604" y="634" width="492" height="96" rx="9"/>
-<text x="620" y="668" class="s">La Commissione si spacca. Bedrin torna: sua figlia</text>
-<text x="620" y="690" class="s">Pim è stata Convocata.</text>
-
-<!-- L7 -->
-<rect class="badge" x="28" y="740" width="172" height="96" rx="9"/>
-<text x="44" y="770" class="t" font-size="16">L7 · La Soglia</text>
-<text x="44" y="794" class="gen">catastrofe</text>
-<rect class="rev" x="208" y="740" width="388" height="96" rx="9"/>
-<text x="224" y="774" class="s">La rivolta: la Bestia si ribella. Arriva la scelta finale</text>
-<text x="224" y="796" class="s">sui Tesi. Nessuna vittoria pulita.</text>
-<rect class="tw" x="604" y="740" width="492" height="96" rx="9"/>
-<text x="620" y="774" class="s">Il sacrificio di Wick non libera i Tesi:</text>
-<text x="620" y="796" class="s">diventa lui la nuova «soglia».</text>
-
-<!-- legenda -->
-<rect x="28" y="864" width="16" height="16" class="rev" rx="3"/><text x="52" y="877" class="s">cosa capisce il lettore</text>
-<rect x="280" y="864" width="16" height="16" class="tw" rx="3"/><text x="304" y="877" class="s">il colpo di scena</text>
-<text x="540" y="877" class="s" font-style="italic">nel romanzo non si dice niente di tutto questo: trapela.</text>
-</svg>
+<p class="cap">Ogni riga è un libro. Al centro: cosa <b>capisce il lettore</b> in quel libro. A destra (in rosso): il <b>colpo di scena</b> che ribalta tutto. Niente di questo viene detto in chiaro nel romanzo: il lettore lo ricostruisce.</p>
+<table class="libri">
+<tr><th>Libro</th><th>Cosa capisce il lettore</th><th>Il colpo di scena</th></tr>
+<tr>
+  <td class="lib">L1 · Sfortuna<span class="gen">indagine / thriller</span></td>
+  <td>Le «Notti», cioè gli uomini che si trasformano in mostri, non sono un caso: qualcuno le provoca e poi le copre.</td>
+  <td class="tw">Lucan, il prefetto che indagava, viene ucciso dai suoi stessi uomini perché aveva smesso di coprire. E Pim, la bambina, mostra i primi segni: prenderla in ostaggio non era casuale.</td>
+</tr>
+<tr>
+  <td class="lib">L2 · La Discesa<span class="gen">avventura + horror</span></td>
+  <td>Si scopre dove finiscono i mostri (i passaggi nel sottosuolo) e un luogo, la «Cicatrice», che sembra «leggere e correggere» chi ci passa.</td>
+  <td class="tw">La via verso il basso non è abbandonata: è sorvegliata apposta, per impedire che qualcuno liberi i prigionieri là sotto.</td>
+</tr>
+<tr>
+  <td class="lib">L3 · La Stretta<span class="gen">assedio + spionaggio</span></td>
+  <td>Dietro il Patto c'è un gruppo segreto, la Commissione. E si capisce che la «Fossa sfortunata» era in realtà un esilio organizzato.</td>
+  <td class="tw">Sevran, il funzionario sereno e insospettabile in cui tutti si fidano, è la talpa che sta smontando la macchina dall'interno.</td>
+</tr>
+<tr>
+  <td class="lib">L4 · Terra Bruciata<span class="gen">caccia nel mondo</span></td>
+  <td>Esistono altre Bestie e altri popoli, e il metodo del rito arriva da fuori città. La «Terra Bruciata» è il posto dove una Bestia è già caduta.</td>
+  <td class="tw">Dorian, l'eroe che era scappato dall'esercito, in realtà doveva essere Convocato: la sua fuga «eroica» è una bugia.</td>
+</tr>
+<tr>
+  <td class="lib">L5 · I Tesi<span class="gen">resa dei conti</span></td>
+  <td>Si conferma che il rito forza il legame e che i Tesi esistono davvero; Riven, il fratello di Selene, è uno di loro. Lo scopo di tutto è il monopolio della magia.</td>
+  <td class="tw">Liberare Riven potrebbe far crollare il mondo intero. E manca una guida al fronte: è Mira a decidere di prendersi quel ruolo.</td>
+</tr>
+<tr>
+  <td class="lib">L6 · La Spaccatura<span class="gen">corsa contro il tempo</span></td>
+  <td>Si capisce il «sovraccarico»: la Bestia sotto la città è ormai vicina al limite. Da qui in poi è una corsa contro il tempo.</td>
+  <td class="tw">La Commissione si spacca al suo interno. E Bedrin torna in scena: sua figlia Pim è stata Convocata.</td>
+</tr>
+<tr>
+  <td class="lib">L7 · La Soglia<span class="gen">catastrofe</span></td>
+  <td>La rivolta finale: la Bestia si ribella e arriva la scelta ultima sui Tesi. Non c'è nessuna vittoria pulita.</td>
+  <td class="tw">Il sacrificio di Wick non libera i Tesi come sperato: è lui a diventare la nuova «soglia» che tiene tutto insieme.</td>
+</tr>
+</table>
+<div class="spiega">
+<span class="how">In una frase</span>
+<p>Ogni libro <b>svela uno strato</b> di verità e, sotto, ne nasconde uno più profondo: per questo la storia non finisce mai di sorprendere, e ogni risposta apre una domanda più grande.</p>
+</div>
 </section>
 
 <!-- ============================ SCHEMA 3 ============================ -->
 <section class="schema">
 <h2>3 · La rotta della saga</h2>
-<p class="cap">Il viaggio dei 7 libri disegnato come una linea che <b>scende e risale</b>. Più un libro è in basso nel disegno, più la storia è andata in profondità (verso Punto Zero, il fondo). È un grande andata-e-ritorno: giù in città → nel sottosuolo → fuori nel mondo → e infine giù fino al fondo.</p>
-<svg viewBox="0 0 1120 480" xmlns="http://www.w3.org/2000/svg" font-family="var(--font-sans, system-ui)" role="img">
-<title>La rotta della saga in 7 libri</title>
+<p class="cap">Il viaggio dei 7 libri disegnato come una linea che <b>scende e risale</b>: più un libro sta in basso, più la storia è andata in profondità verso il fondo (Punto Zero).</p>
+<svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>La rotta della saga</title>
 <defs>
-<marker id="a3" markerWidth="12" markerHeight="12" refX="8" refY="3.4" orient="auto"><path d="M0,0 L10,3.4 L0,6.8 Z" fill="#7d5ba6"/></marker>
+<marker id="a3" markerWidth="11" markerHeight="11" refX="7" refY="3.2" orient="auto"><path d="M0,0 L9,3.2 L0,6.4 Z" fill="#7d5ba6"/></marker>
 <style>
-.t{fill:var(--text-primary,#1a1a1a);font-weight:700}
-.s{fill:var(--text-secondary,#3f3f3f);font-size:12.5px}
-.g{fill:var(--text-accent,#7d5ba6);font-size:11.5px;font-weight:700}
-.nd{fill:var(--surface-1,#f6f5f3);stroke:var(--border-strong,#bbb);stroke-width:1.8}
+.nd{fill:#f6f5f3;stroke:#bbb;stroke-width:1.8}
 .deep{fill:#eee9f3;stroke:#7d5ba6;stroke-width:2.4}
-.path{stroke:#7d5ba6;stroke-width:2.8;fill:none}
-.ax{fill:var(--text-muted,#999);font-size:12px;font-weight:700;letter-spacing:.5px}
+.pt{stroke:#7d5ba6;stroke-width:2.8;fill:none}
+.tt{font-family:system-ui,Arial,sans-serif;font-size:14px;font-weight:700;fill:#1a1a1a}
+.ss{font-family:system-ui,Arial,sans-serif;font-size:12px;fill:#3a3a3a}
+.ax{font-family:system-ui,Arial,sans-serif;font-size:12px;font-weight:700;fill:#999;letter-spacing:.5px}
 </style>
 </defs>
-<text x="24" y="34" class="t" font-size="22">LA ROTTA DELLA SAGA</text>
+<text x="10" y="22" class="ax">↑ SUPERFICIE</text>
+<text x="10" y="420" class="ax">↓ FONDO (Punto Zero)</text>
+<line x1="6" y1="30" x2="6" y2="400" stroke="#ddd" stroke-width="1.4" stroke-dasharray="3 4"/>
 
-<text x="14" y="84" class="ax">↑ SUPERFICIE (la città in alto)</text>
-<line x1="10" y1="92" x2="10" y2="430" stroke="var(--border,#ddd)" stroke-width="1.4" stroke-dasharray="3 4"/>
-<text x="14" y="448" class="ax">↓ FONDO (Punto Zero)</text>
+<path class="pt" d="M140,108 L150,228" marker-end="url(#a3)"/>
+<path class="pt" d="M280,228 L292,158" marker-end="url(#a3)"/>
+<path class="pt" d="M424,158 L436,92" marker-end="url(#a3)"/>
+<path class="pt" d="M566,92 L578,178" marker-end="url(#a3)"/>
+<path class="pt" d="M712,178 L724,248" marker-end="url(#a3)"/>
+<path class="pt" d="M856,248 L868,330" marker-end="url(#a3)"/>
 
-<path class="path" d="M154,128 L168,278" marker-end="url(#a3)"/>
-<path class="path" d="M312,278 L330,196" marker-end="url(#a3)"/>
-<path class="path" d="M474,196 L492,114" marker-end="url(#a3)"/>
-<path class="path" d="M636,114 L654,210" marker-end="url(#a3)"/>
-<path class="path" d="M798,210 L816,278" marker-end="url(#a3)"/>
-<path class="path" d="M960,278 L976,372" marker-end="url(#a3)"/>
-
-<rect class="nd" x="24" y="96" width="130" height="78" rx="10"/>
-<text x="89" y="120" class="t" font-size="14" text-anchor="middle">L1 · Vaekh</text>
-<text x="89" y="140" class="s" text-anchor="middle">la città</text>
-<text x="89" y="160" class="g" text-anchor="middle">thriller</text>
-
-<rect class="nd" x="168" y="246" width="144" height="78" rx="10"/>
-<text x="240" y="270" class="t" font-size="14" text-anchor="middle">L2 · Fondamenta</text>
-<text x="240" y="290" class="s" text-anchor="middle">la discesa</text>
-<text x="240" y="310" class="g" text-anchor="middle">avventura / horror</text>
-
-<rect class="nd" x="330" y="164" width="144" height="78" rx="10"/>
-<text x="402" y="188" class="t" font-size="14" text-anchor="middle">L3 · Vaekh</text>
-<text x="402" y="208" class="s" text-anchor="middle">l'assedio</text>
-<text x="402" y="228" class="g" text-anchor="middle">spionaggio / paranoia</text>
-
-<rect class="nd" x="492" y="82" width="144" height="78" rx="10"/>
-<text x="564" y="106" class="t" font-size="14" text-anchor="middle">L4 · Mondo vasto</text>
-<text x="564" y="126" class="s" text-anchor="middle">+ Terra Bruciata</text>
-<text x="564" y="146" class="g" text-anchor="middle">caccia nel mondo</text>
-
-<rect class="nd" x="654" y="178" width="144" height="78" rx="10"/>
-<text x="726" y="202" class="t" font-size="14" text-anchor="middle">L5 · Ritorno</text>
-<text x="726" y="222" class="s" text-anchor="middle">i conti</text>
-<text x="726" y="242" class="g" text-anchor="middle">resa dei conti</text>
-
-<rect class="nd" x="816" y="246" width="144" height="78" rx="10"/>
-<text x="888" y="270" class="t" font-size="14" text-anchor="middle">L6 · Caccia</text>
-<text x="888" y="290" class="s" text-anchor="middle">la verità ultima</text>
-<text x="888" y="310" class="g" text-anchor="middle">corsa al tempo</text>
-
-<rect class="deep" x="976" y="340" width="144" height="78" rx="10"/>
-<text x="1048" y="364" class="t" font-size="14" text-anchor="middle">L7 · Punto Zero</text>
-<text x="1048" y="384" class="s" text-anchor="middle">la scelta finale</text>
-<text x="1048" y="404" class="g" text-anchor="middle">catastrofe</text>
+<rect class="nd" x="20" y="80" width="120" height="62" rx="9"/><text x="80" y="104" class="tt" text-anchor="middle">L1 · la città</text><text x="80" y="124" class="ss" text-anchor="middle">thriller</text>
+<rect class="nd" x="150" y="200" width="130" height="62" rx="9"/><text x="215" y="224" class="tt" text-anchor="middle">L2 · la discesa</text><text x="215" y="244" class="ss" text-anchor="middle">sottosuolo</text>
+<rect class="nd" x="294" y="130" width="130" height="62" rx="9"/><text x="359" y="154" class="tt" text-anchor="middle">L3 · l'assedio</text><text x="359" y="174" class="ss" text-anchor="middle">in città</text>
+<rect class="nd" x="438" y="64" width="130" height="62" rx="9"/><text x="503" y="88" class="tt" text-anchor="middle">L4 · il mondo</text><text x="503" y="108" class="ss" text-anchor="middle">caccia fuori</text>
+<rect class="nd" x="580" y="150" width="132" height="62" rx="9"/><text x="646" y="174" class="tt" text-anchor="middle">L5 · il ritorno</text><text x="646" y="194" class="ss" text-anchor="middle">i conti</text>
+<rect class="nd" x="726" y="220" width="130" height="62" rx="9"/><text x="791" y="244" class="tt" text-anchor="middle">L6 · la caccia</text><text x="791" y="264" class="ss" text-anchor="middle">la verità</text>
+<rect class="deep" x="870" y="300" width="120" height="62" rx="9"/><text x="930" y="324" class="tt" text-anchor="middle">L7 · il fondo</text><text x="930" y="344" class="ss" text-anchor="middle">la scelta</text>
 </svg>
+<div class="spiega">
+<span class="how">Come si legge questo disegno</span>
+<p>È un grande <b>andata e ritorno</b>, e l'altezza nel disegno indica la profondità: in alto si è in superficie, in basso si è vicini al fondo segreto.</p>
+<p>Si parte in città (<b>L1</b>), poi si <b>scende</b> nel sottosuolo (<b>L2</b>). Si torna su, di nuovo in città ma sotto assedio (<b>L3</b>), e poi <b>fuori</b>, lontano da Vaekh, a caccia nel mondo (<b>L4</b>, il punto più «in superficie» della saga). Da lì si comincia a tornare verso casa per la resa dei conti (<b>L5</b>) e per la verità ultima (<b>L6</b>), fino a <b>scendere fino in fondo</b>, a Punto Zero, per la scelta finale (<b>L7</b>).</p>
+<p>In breve: la storia ti porta sempre più lontano e poi sempre più in profondità, e il movimento del disegno è esattamente quello che provano i personaggi.</p>
+</div>
 </section>
 
 <!-- ============================ SCHEMA 4 ============================ -->
 <section class="schema">
 <h2>4 · Libro 1 — i 15 capitoli</h2>
-<p class="cap">La griglia si legge a serpentina: prima riga da sinistra a destra (→), poi si scende (↓), poi la seconda riga da destra a sinistra (←), e così via. Il <b>colore del bordo</b> dice di chi è il punto di vista (chi vive la scena). La stella ★ segna i due momenti chiave: il centro (capitolo 9) e il culmine (capitolo 14).</p>
-<svg viewBox="0 0 1120 660" xmlns="http://www.w3.org/2000/svg" font-family="var(--font-sans, system-ui)" role="img">
+<p class="cap">L'ordine dei capitoli del primo libro. Il disegno mostra il flusso (si legge a serpentina: →, poi giù, poi ←); il colore è il personaggio di cui seguiamo gli occhi. Sotto, ogni capitolo spiegato in una frase.</p>
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" role="img">
 <title>Libro 1 — flusso dei 15 capitoli</title>
 <defs>
-<marker id="a4" markerWidth="11" markerHeight="11" refX="7" refY="3.2" orient="auto"><path d="M0,0 L9,3.2 L0,6.4 Z" fill="var(--text-muted,#999)"/></marker>
+<marker id="a4" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#aaa"/></marker>
 <style>
-.t{fill:var(--text-primary,#1a1a1a);font-weight:700;font-size:14px}
-.s{fill:var(--text-secondary,#3f3f3f);font-size:12px}
-.pov{font-size:11px;font-weight:700;letter-spacing:.5px}
-.nd{fill:var(--surface-1,#f6f5f3);stroke-width:2.6}
-.flow{stroke:var(--text-muted,#aaa);stroke-width:2.4;fill:none}
-.star{fill:#c0392b;font-size:13px;font-weight:700}
+.cap-b{fill:#f6f5f3;stroke-width:3}
+.fl{stroke:#aaa;stroke-width:2.4;fill:none}
+.cn{font-family:system-ui,Arial,sans-serif;font-size:18px;font-weight:700;fill:#1a1a1a}
+.ct{font-family:system-ui,Arial,sans-serif;font-size:11px;fill:#3a3a3a}
 </style>
 </defs>
-<text x="24" y="34" class="t" font-size="22" fill="var(--text-primary,#1a1a1a)">LIBRO 1 — I 15 CAPITOLI</text>
-
-<!-- frecce serpentina -->
-<path class="flow" d="M226,162 L238,162" marker-end="url(#a4)"/>
-<path class="flow" d="M442,162 L454,162" marker-end="url(#a4)"/>
-<path class="flow" d="M658,162 L670,162" marker-end="url(#a4)"/>
-<path class="flow" d="M874,162 L886,162" marker-end="url(#a4)"/>
-<path class="flow" d="M986,238 L986,286" marker-end="url(#a4)"/>
-<path class="flow" d="M886,338 L874,338" marker-end="url(#a4)"/>
-<path class="flow" d="M670,338 L658,338" marker-end="url(#a4)"/>
-<path class="flow" d="M454,338 L442,338" marker-end="url(#a4)"/>
-<path class="flow" d="M238,338 L226,338" marker-end="url(#a4)"/>
-<path class="flow" d="M126,414 L126,462" marker-end="url(#a4)"/>
-<path class="flow" d="M226,514 L238,514" marker-end="url(#a4)"/>
-<path class="flow" d="M442,514 L454,514" marker-end="url(#a4)"/>
-<path class="flow" d="M658,514 L670,514" marker-end="url(#a4)"/>
-<path class="flow" d="M874,514 L886,514" marker-end="url(#a4)"/>
-
+<!-- serpentina frecce -->
+<path class="fl" d="M168,55 L182,55" marker-end="url(#a4)"/>
+<path class="fl" d="M348,55 L362,55" marker-end="url(#a4)"/>
+<path class="fl" d="M528,55 L542,55" marker-end="url(#a4)"/>
+<path class="fl" d="M708,55 L722,55" marker-end="url(#a4)"/>
+<path class="fl" d="M860,90 L860,120" marker-end="url(#a4)"/>
+<path class="fl" d="M722,155 L708,155" marker-end="url(#a4)"/>
+<path class="fl" d="M542,155 L528,155" marker-end="url(#a4)"/>
+<path class="fl" d="M362,155 L348,155" marker-end="url(#a4)"/>
+<path class="fl" d="M182,155 L168,155" marker-end="url(#a4)"/>
+<path class="fl" d="M100,190 L100,220" marker-end="url(#a4)"/>
+<path class="fl" d="M168,255 L182,255" marker-end="url(#a4)"/>
+<path class="fl" d="M348,255 L362,255" marker-end="url(#a4)"/>
+<path class="fl" d="M528,255 L542,255" marker-end="url(#a4)"/>
+<path class="fl" d="M708,255 L722,255" marker-end="url(#a4)"/>
 <!-- riga 1 -->
-<rect class="nd" x="24" y="90" width="202" height="144" rx="10" stroke="#2e8b57"/>
-<text x="36" y="112" class="pov" fill="#2e8b57">WICK</text>
-<text x="36" y="134" class="t">01 · La cosa</text>
-<text x="36" y="158" class="s">Il potere magico gli esplode</text>
-<text x="36" y="176" class="s">addosso all'improvviso. Una</text>
-<text x="36" y="194" class="s">donna ha visto tutto.</text>
-
-<rect class="nd" x="240" y="90" width="202" height="144" rx="10" stroke="#b8860b"/>
-<text x="252" y="112" class="pov" fill="#b8860b">BEDRIN</text>
-<text x="252" y="134" class="t">02 · Sfortuna</text>
-<text x="252" y="158" class="s">Una «Notte»: un uomo diventa</text>
-<text x="252" y="176" class="s">mostro. Bedrin trova il vicolo</text>
-<text x="252" y="194" class="s">già cieco e vuoto.</text>
-
-<rect class="nd" x="456" y="90" width="202" height="144" rx="10" stroke="#7d5ba6"/>
-<text x="468" y="112" class="pov" fill="#7d5ba6">SELENE</text>
-<text x="468" y="134" class="t">03 · Onore</text>
-<text x="468" y="158" class="s">Festa per suo fratello Riven,</text>
-<text x="468" y="176" class="s">appena «Convocato». In lui</text>
-<text x="468" y="194" class="s">Selene sente un vuoto strano.</text>
-
-<rect class="nd" x="672" y="90" width="202" height="144" rx="10" stroke="#2f6f9f"/>
-<text x="684" y="112" class="pov" fill="#2f6f9f">DORIAN</text>
-<text x="684" y="134" class="t">04 · Il caso</text>
-<text x="684" y="158" class="s">Muore il prefetto Lucan.</text>
-<text x="684" y="176" class="s">L'indagine di Dorian punta</text>
-<text x="684" y="194" class="s">verso la Fossa.</text>
-
-<rect class="nd" x="888" y="90" width="202" height="144" rx="10" stroke="#b8860b"/>
-<text x="900" y="112" class="pov" fill="#b8860b">BEDRIN</text>
-<text x="900" y="134" class="t">05 · Scorie</text>
-<text x="900" y="158" class="s">La guerra fra bande. Una</text>
-<text x="900" y="176" class="s">«Notte» scoppia vicino a Pim,</text>
-<text x="900" y="194" class="s">la figlia di Bedrin.</text>
-
-<!-- riga 2 (destra→sinistra) -->
-<rect class="nd" x="888" y="266" width="202" height="144" rx="10" stroke="#7d5ba6"/>
-<text x="900" y="288" class="pov" fill="#7d5ba6">SELENE</text>
-<text x="900" y="310" class="t">06 · Sotto</text>
-<text x="900" y="334" class="s">Selene scende alla Fossa. Il</text>
-<text x="900" y="352" class="s">Silenzio mette insieme quattro</text>
-<text x="900" y="370" class="s">persone che si odiano.</text>
-
-<rect class="nd" x="672" y="266" width="202" height="144" rx="10" stroke="#2e8b57"/>
-<text x="684" y="288" class="pov" fill="#2e8b57">WICK</text>
-<text x="684" y="310" class="t">07 · Il debito</text>
-<text x="684" y="334" class="s">Prova a non usare il potere e</text>
-<text x="684" y="352" class="s">non ci riesce. Per poco non</text>
-<text x="684" y="370" class="s">ferisce il piccolo Timo.</text>
-
-<rect class="nd" x="456" y="266" width="202" height="144" rx="10" stroke="#2f6f9f"/>
-<text x="468" y="288" class="pov" fill="#2f6f9f">DORIAN</text>
-<text x="468" y="310" class="t">08 · I conti</text>
-<text x="468" y="334" class="s">Lo schema delle Notti era</text>
-<text x="468" y="352" class="s">scritto nei registri di Bedrin</text>
-<text x="468" y="370" class="s">da anni.</text>
-
-<rect class="nd" x="240" y="266" width="202" height="144" rx="10" stroke="#7d5ba6"/>
-<text x="252" y="288" class="pov" fill="#7d5ba6">SELENE</text>
-<text x="252" y="310" class="t">09 · Lo stesso <tspan class="star">★</tspan></text>
-<text x="252" y="334" class="s">CENTRO: la gloria e la sfortuna</text>
-<text x="252" y="352" class="s">hanno le stesse mani dietro.</text>
-<text x="252" y="370" class="s">E si paga col sangue.</text>
-
-<rect class="nd" x="24" y="266" width="202" height="144" rx="10" stroke="#b8860b"/>
-<text x="36" y="288" class="pov" fill="#b8860b">BEDRIN</text>
-<text x="36" y="310" class="t">10 · La stretta</text>
-<text x="36" y="334" class="s">Il boss Maelor prende Pim in</text>
-<text x="36" y="352" class="s">ostaggio: «L'hanno chiesta</text>
-<text x="36" y="370" class="s">quelli di sopra».</text>
-
+<rect class="cap-b" x="40" y="30" width="128" height="50" rx="9" stroke="#2e8b57"/><text x="104" y="56" class="cn" text-anchor="middle">01</text><text x="104" y="72" class="ct" text-anchor="middle">Wick · La cosa</text>
+<rect class="cap-b" x="220" y="30" width="128" height="50" rx="9" stroke="#b8860b"/><text x="284" y="56" class="cn" text-anchor="middle">02</text><text x="284" y="72" class="ct" text-anchor="middle">Bedrin · Sfortuna</text>
+<rect class="cap-b" x="400" y="30" width="128" height="50" rx="9" stroke="#7d5ba6"/><text x="464" y="56" class="cn" text-anchor="middle">03</text><text x="464" y="72" class="ct" text-anchor="middle">Selene · Onore</text>
+<rect class="cap-b" x="580" y="30" width="128" height="50" rx="9" stroke="#2f6f9f"/><text x="644" y="56" class="cn" text-anchor="middle">04</text><text x="644" y="72" class="ct" text-anchor="middle">Dorian · Il caso</text>
+<rect class="cap-b" x="760" y="30" width="128" height="50" rx="9" stroke="#b8860b"/><text x="824" y="56" class="cn" text-anchor="middle">05</text><text x="824" y="72" class="ct" text-anchor="middle">Bedrin · Scorie</text>
+<!-- riga 2 -->
+<rect class="cap-b" x="760" y="130" width="128" height="50" rx="9" stroke="#7d5ba6"/><text x="824" y="156" class="cn" text-anchor="middle">06</text><text x="824" y="172" class="ct" text-anchor="middle">Selene · Sotto</text>
+<rect class="cap-b" x="580" y="130" width="128" height="50" rx="9" stroke="#2e8b57"/><text x="644" y="156" class="cn" text-anchor="middle">07</text><text x="644" y="172" class="ct" text-anchor="middle">Wick · Il debito</text>
+<rect class="cap-b" x="400" y="130" width="128" height="50" rx="9" stroke="#2f6f9f"/><text x="464" y="156" class="cn" text-anchor="middle">08</text><text x="464" y="172" class="ct" text-anchor="middle">Dorian · I conti</text>
+<rect class="cap-b" x="220" y="130" width="128" height="50" rx="9" stroke="#7d5ba6"/><text x="284" y="156" class="cn" text-anchor="middle">09 ★</text><text x="284" y="172" class="ct" text-anchor="middle">Selene · Lo stesso</text>
+<rect class="cap-b" x="40" y="130" width="128" height="50" rx="9" stroke="#b8860b"/><text x="104" y="156" class="cn" text-anchor="middle">10</text><text x="104" y="172" class="ct" text-anchor="middle">Bedrin · La stretta</text>
 <!-- riga 3 -->
-<rect class="nd" x="24" y="442" width="202" height="144" rx="10" stroke="#2e8b57"/>
-<text x="36" y="464" class="pov" fill="#2e8b57">WICK</text>
-<text x="36" y="486" class="t">11 · Sollievo</text>
-<text x="36" y="510" class="s">Quasi catturato, usa il potere</text>
-<text x="36" y="528" class="s">— e scopre che «esistere»</text>
-<text x="36" y="546" class="s">gli piace.</text>
-
-<rect class="nd" x="240" y="442" width="202" height="144" rx="10" stroke="#7d5ba6"/>
-<text x="252" y="464" class="pov" fill="#7d5ba6">SELENE</text>
-<text x="252" y="486" class="t">12 · Il tornato</text>
-<text x="252" y="510" class="s">Edran torna dalla Convocazione</text>
-<text x="252" y="528" class="s">sereno e grato: l'orrore è che</text>
-<text x="252" y="546" class="s">sta bene. «Restituiscono.»</text>
-
-<rect class="nd" x="456" y="442" width="202" height="144" rx="10" stroke="#b8860b"/>
-<text x="468" y="464" class="pov" fill="#b8860b">BEDRIN</text>
-<text x="468" y="486" class="t">13 · Lo scatto</text>
-<text x="468" y="510" class="s">Bedrin sgozza Maelor. Nerissa</text>
-<text x="468" y="528" class="s">prende il comando e diventa</text>
-<text x="468" y="546" class="s">un'alleata fredda.</text>
-
-<rect class="nd" x="672" y="442" width="202" height="144" rx="10" stroke="#2f6f9f"/>
-<text x="684" y="464" class="pov" fill="#2f6f9f">DORIAN</text>
-<text x="684" y="486" class="t">14 · La mano <tspan class="star">★</tspan></text>
-<text x="684" y="510" class="s">CULMINE: «il segno viene prima».</text>
-<text x="684" y="528" class="s">C'è una mano oltre il Patto.</text>
-<text x="684" y="546" class="s">Noma tradisce.</text>
-
-<rect class="nd" x="888" y="442" width="202" height="144" rx="10" stroke="var(--text-muted,#888)"/>
-<text x="900" y="464" class="pov" fill="var(--text-muted,#888)">TUTTI (corale)</text>
-<text x="900" y="486" class="t">15 · Giù → Libro 2</text>
-<text x="900" y="510" class="s">Braccati e senza più</text>
-<text x="900" y="528" class="s">protezione: l'unica via</text>
-<text x="900" y="546" class="s">rimasta è scendere.</text>
-
-<!-- legenda POV -->
-<rect x="24" y="616" width="15" height="15" rx="3" fill="var(--surface-1,#f6f5f3)" stroke="#2e8b57" stroke-width="2.6"/><text x="46" y="628" class="s">Wick</text>
-<rect x="128" y="616" width="15" height="15" rx="3" fill="var(--surface-1,#f6f5f3)" stroke="#b8860b" stroke-width="2.6"/><text x="150" y="628" class="s">Bedrin</text>
-<rect x="240" y="616" width="15" height="15" rx="3" fill="var(--surface-1,#f6f5f3)" stroke="#7d5ba6" stroke-width="2.6"/><text x="262" y="628" class="s">Selene</text>
-<rect x="352" y="616" width="15" height="15" rx="3" fill="var(--surface-1,#f6f5f3)" stroke="#2f6f9f" stroke-width="2.6"/><text x="374" y="628" class="s">Dorian</text>
-<rect x="464" y="616" width="15" height="15" rx="3" fill="var(--surface-1,#f6f5f3)" stroke="var(--text-muted,#888)" stroke-width="2.6"/><text x="486" y="628" class="s">corale (tutti)</text>
-<text x="600" y="628" class="s"><tspan class="star">★</tspan> = centro (cap. 9) e culmine (cap. 14)</text>
+<rect class="cap-b" x="40" y="230" width="128" height="50" rx="9" stroke="#2e8b57"/><text x="104" y="256" class="cn" text-anchor="middle">11</text><text x="104" y="272" class="ct" text-anchor="middle">Wick · Sollievo</text>
+<rect class="cap-b" x="220" y="230" width="128" height="50" rx="9" stroke="#7d5ba6"/><text x="284" y="256" class="cn" text-anchor="middle">12</text><text x="284" y="272" class="ct" text-anchor="middle">Selene · Il tornato</text>
+<rect class="cap-b" x="400" y="230" width="128" height="50" rx="9" stroke="#b8860b"/><text x="464" y="256" class="cn" text-anchor="middle">13</text><text x="464" y="272" class="ct" text-anchor="middle">Bedrin · Lo scatto</text>
+<rect class="cap-b" x="580" y="230" width="128" height="50" rx="9" stroke="#2f6f9f"/><text x="644" y="256" class="cn" text-anchor="middle">14 ★</text><text x="644" y="272" class="ct" text-anchor="middle">Dorian · La mano</text>
+<rect class="cap-b" x="760" y="230" width="128" height="50" rx="9" stroke="#888"/><text x="824" y="256" class="cn" text-anchor="middle">15</text><text x="824" y="272" class="ct" text-anchor="middle">Tutti · Giù</text>
 </svg>
+<div class="spiega">
+<span class="how">I 15 capitoli, uno per uno</span>
+<ol class="caps">
+<li><span class="n" style="color:#2e8b57">01 · Wick</span><b>La cosa.</b> Il potere magico esplode addosso a Wick per la prima volta, mentre un uomo sta per ucciderlo. Una donna, dall'altra parte del cortile, ha visto tutto.</li>
+<li><span class="n" style="color:#b8860b">02 · Bedrin</span><b>Sfortuna.</b> Al mercato un uomo si trasforma in mostro davanti a tutti: è una «Notte». Bedrin scopre che il vicolo dove è sparito finisce contro un muro cieco, e non c'è più niente.</li>
+<li><span class="n" style="color:#7d5ba6">03 · Selene</span><b>Onore.</b> Festa per il fratello Riven, appena «Convocato». Tutti lo invidiano; Selene, che sa leggere le persone, sente in lui un vuoto strano e si sforza di ignorarlo.</li>
+<li><span class="n" style="color:#2f6f9f">04 · Dorian</span><b>Il caso.</b> Muore il prefetto Lucan. Dorian capisce che la scena è già stata ripulita «da gente di casa», e l'indagine punta verso il basso, verso la Fossa.</li>
+<li><span class="n" style="color:#b8860b">05 · Bedrin</span><b>Scorie.</b> È guerra tra le bande criminali. Una «Notte» scoppia vicino a casa, e al ritorno Bedrin trova la figlia Pim che dice una frase inquietante: «È smesso adesso».</li>
+<li><span class="n" style="color:#7d5ba6">06 · Selene</span><b>Sotto.</b> Selene scende nella Fossa. La polizia segreta mette insieme quattro persone che si detestano, costringendole a collaborare.</li>
+<li><span class="n" style="color:#2e8b57">07 · Wick</span><b>Il debito.</b> Wick prova a non usare più il potere e non ci riesce; per poco non fa del male al piccolo Timo. Il potere lo chiama.</li>
+<li><span class="n" style="color:#2f6f9f">08 · Dorian</span><b>I conti.</b> Dorian scopre che lo schema delle «Notti» era scritto, nero su bianco, nei vecchi registri di Bedrin da anni.</li>
+<li><span class="n" style="color:#7d5ba6">09 · Selene ★</span><b>Lo stesso.</b> <b>Centro del libro:</b> la gloria (la Convocazione) e la sfortuna (le Notti) hanno le stesse mani dietro. E qualcuno paga col sangue.</li>
+<li><span class="n" style="color:#b8860b">10 · Bedrin</span><b>La stretta.</b> Il boss Maelor prende in ostaggio Pim e si lascia sfuggire una frase pesante: «L'hanno chiesta quelli di sopra».</li>
+<li><span class="n" style="color:#2e8b57">11 · Wick</span><b>Sollievo.</b> Messo alle strette, Wick usa di nuovo il potere — e si accorge, con paura, che «esistere» e contare qualcosa gli piace.</li>
+<li><span class="n" style="color:#7d5ba6">12 · Selene</span><b>Il tornato.</b> Edran torna dalla Convocazione sereno e grato. L'orrore è proprio questo: sta bene. «Restituiscono», dice.</li>
+<li><span class="n" style="color:#b8860b">13 · Bedrin</span><b>Lo scatto.</b> Bedrin uccide Maelor per salvare Pim. Al comando della banda sale Nerissa, che diventa un'alleata fredda e pericolosa.</li>
+<li><span class="n" style="color:#2f6f9f">14 · Dorian ★</span><b>La mano.</b> <b>Culmine del libro:</b> Dorian capisce che esiste una mano che agisce <b>oltre</b> il Patto. E viene tradito da Noma.</li>
+<li><span class="n" style="color:#888">15 · Tutti</span><b>Giù.</b> Braccati e senza più nessuno che li protegga, ai protagonisti resta una sola via d'uscita: scendere. (È il ponte verso il Libro 2.)</li>
+</ol>
+</div>
 </section>
